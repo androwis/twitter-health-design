@@ -106,23 +106,77 @@
 </style>
 
 <script type="text/javascript">
-d3.json("/twitter-health-design/resources/diseases.json", function(dataJSON) {
+d3.json("/resources/scripts/diseases.json", function(dataJSON) {
 
 	var data = [];
 
 	// Convert strings to numbers.
 	$.each(dataJSON, function(){
 			$.each(this, function(k,v){
-				data.push({disease:v.key.toString().split(',')[0], value:v.value})
-				//alert(v.key.toString().split(',')[0]+"|"+v.value);
+				var date = v.key.toString().split(',')[3];
+				var epoch = 
+					// align them by epoc
+					new Date(date.split(' ')[3], 5, date.split(' ')[0]).getTime() / 10000 - new Date(2012, 5, 1).getTime() / 10000
+					// add the hours
+					+ 60*60*date.split(' ')[4]/120;
+					// grouping hack by length of string
+				var delta=2;
+				var dis = v.key.toString().split(',')[0];
+				  if(dis=="Anthrax")
+					  epoch+=0*delta;
+				  else if(dis=="Cholera")
+					  epoch+=1*delta;
+				  else if(dis=="Common Cold")
+					  epoch+=2*delta;
+				  else if(dis=="Dengue")
+					  epoch+=3*delta;
+				  else if(dis=="Diptheria")
+					  epoch+=4*delta;
+				  else if(dis=="Gastroenteritis")
+					  epoch+=5*delta;
+				  else if(dis=="Influenza")
+					  epoch+=6*delta;
+				  else if(dis=="Legionnaires' Disease")
+					  epoch+=7*delta;
+				  else if(dis=="Malaria")
+					  epoch+=8*delta;
+				  else if(dis=="Measles")
+					  epoch+=9*delta;
+				  else if(dis=="Meningitis")
+					  epoch+=10*delta;
+				  else if(dis=="Mosquito Borne Disease")
+					  epoch+=11*delta;
+				  else if(dis=="Mumps")
+					  epoch+=12*delta;
+				  else if(dis=="Pertussis")
+					  epoch+=13*delta;
+				  else if(dis=="Pneumonia")
+					  epoch+=14*delta;
+				  else if(dis=="Polio")
+					  epoch+=15*delta;
+				  else if(dis=="STD")
+					  epoch+=16*delta;
+				  else if(dis=="Rabies")
+					  epoch+=17*delta;
+				  else if(dis=="Tuberculosis")
+					  epoch+=18*delta;
+				  
+				  else
+					  epoch+=0*delta;
+
+				  data.push({
+					disease:v.key.toString().split(',')[0],
+					date:epoch,
+					value:v.value
+					})
+				//alert(v.key.toString().split(',')[3]+"|"+v.value);
 			});
 	});
 	
-	var barWidth = 1;
-	var width = (barWidth + 2) * 1000;
-	height = 500;
-	
-	var x = d3.scale.linear().domain([0, data.length]).range([0, width]);
+	var barWidth = 2;
+	var width = 1100;
+	var height = 100;
+	var x = d3.scale.linear().domain([d3.min(data, function(datum) { return datum.date; }), d3.max(data, function(datum) { return datum.date; })]).range([0, width]);
 	var y = d3.scale.linear().domain([0, d3.max(data, function(datum) { return datum.value; })]).
 	  rangeRound([0, height]);
 
@@ -136,29 +190,62 @@ d3.json("/twitter-health-design/resources/diseases.json", function(dataJSON) {
 	  data(data).
 	  enter().
 	  append("svg:rect").
-	  attr("x", function(datum, index) { return x(index); }).
+	  attr("x", function(datum, index) { return x(datum.date); }).
 	  attr("y", function(datum) { return height - y(datum.value); }).
 	  attr("height", function(datum) { return y(datum.value); }).
 	  attr("width", barWidth).
 	  attr("fill", function(datum){
 		  if(datum.disease=="Anthrax")
+			  return "pink";
+
+		  else if(datum.disease=="Cholera")
+			  return "red";
+
+		  else if(datum.disease=="Common Cold")
+			  return "darkred";
+
+		  else if(datum.disease=="Dengue")
+			  return "darkorange";
+
+		  else if(datum.disease=="Diptheria")
+			  return "orange";
+		  
+		  else if(datum.disease=="Gastroenteritis")
+			  return "lightorange";
+		  
+		  else if(datum.disease=="Influenza")
+			  return "lightyellow";
+		  
+		  else if(datum.disease=="Legionnaires' Disease")
+			  return "yellow";
+		  
+		  else if(datum.disease=="Malaria")
+			  return "darkyellow";
+		  
+		  else if(datum.disease=="Measles")
+			  return "darkgreen";
+		  
+		  else if(datum.disease=="Meningitis")
+			  return "green";
+		  else if(datum.disease=="Mosquito Borne Disease")
+			  return "lightgreen";
+		  else if(datum.disease=="Mumps")
+			  return "lightblue";
+		  else if(datum.disease=="Pertussis")
 			  return "blue";
+		  else if(datum.disease=="Pneumonia")
+			  return "darkblue";
+		  else if(datum.disease=="Polio")
+			  return "darkindigo";
+		  
 		  else if(datum.disease=="STD")
 			  return "red";
-		  else if(datum.disease=="Common Cold")
-			  return "green";
-		  else if(datum.disease=="Pertussis")
-			  return "yellow";
-		  else if(datum.disease=="Gastroenteritis")
-			  return "orange";
-		  else if(datum.disease=="Mosquito Borne Disease")
-			  return "black";
+		 
 		  else if(datum.disease=="Rabies")
 			  return "purple";
 		  else if(datum.disease=="Tuberculosis")
 			  return "pink";
-		  else if(datum.disease=="Malaria")
-			  return "fuscia";
+		  
 		  else
 			  return "#cccccc";});
 	
