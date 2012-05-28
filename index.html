@@ -204,7 +204,6 @@ d3.json("http://androw.is/twitter-health-design/resources/diseases.json", functi
 	  .attr("fill", function(datum){
 		  if(datum.disease=="Anthrax")
 			  return "pink";
-			$(this).wrap("<a href='#' rel='tooltip' title='Anthrax' />");
 
 		  else if(datum.disease=="Cholera")
 			  return "red";
@@ -256,7 +255,7 @@ d3.json("http://androw.is/twitter-health-design/resources/diseases.json", functi
 		  
 		  else
 			  return "#cccccc";})
-		.$(this).wrap(div.attr(val, function(datum){return datum.disease})).attr(rel,"whatever");
+		.$(this).wrap('<div rel="tooltip" title='function(datum){return datum.disease}) '/>';
 			 
 			  	  
 		;
