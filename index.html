@@ -64,7 +64,7 @@
             <ul class="nav nav-list">
               <li class="nav-header"><i class="icon-wrench"></i> Category (flus?)</li>
               <li class="active"><a href="#">Flu</a></li>
-              <li><a href="#">Adenovirus</a></li>
+              <li><a href="#" class="toniiscute" rel='tooltip' title='hahahaha bitches'>Adenovirus</a></li>
               <li><a href="#">h1n1</a></li>
               <li><a href="#">Gastroenteritis</a></li>
               <li><a href="#">Food Poisioning</a></li>
@@ -98,6 +98,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="http://d3js.org/d3.v2.js"></script>
 
+
 <style>
 	.chart rect {
 		stroke: white;
@@ -106,6 +107,12 @@
 </style>
 
 <script type="text/javascript">
+
+$(function() {
+	$('a[rel=tooltip]').tooltip();
+});
+
+
 d3.json("http://androw.is/twitter-health-design/resources/diseases.json", function(dataJSON) {
 
 	var data = [];
@@ -197,6 +204,7 @@ d3.json("http://androw.is/twitter-health-design/resources/diseases.json", functi
 	  attr("fill", function(datum){
 		  if(datum.disease=="Anthrax")
 			  return "pink";
+			$(this).wrap("<a href='#' rel='tooltip' title='Anthrax' />");
 
 		  else if(datum.disease=="Cholera")
 			  return "red";
@@ -248,6 +256,8 @@ d3.json("http://androw.is/twitter-health-design/resources/diseases.json", functi
 		  
 		  else
 			  return "#cccccc";});
+
+		
 	
 });
 
