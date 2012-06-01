@@ -1,0 +1,1721 @@
+<html><head><style type="text/css">@media print {  .gmnoprint {    display:none  }}@media screen {  .gmnoscreen {    display:none  }}</style>
+	<title>TwitterHealth :: Diseases</title>
+	<link type="text/css" rel="stylesheet" media="screen" href="/resources/styles/style.css">
+	<link type="text/css" rel="stylesheet" media="screen" href="/resources/styles/menu.css">
+	<link type="text/css" rel="stylesheet" media="screen" href="/resources/styles/style-dev0.css">
+	<link type="text/css" rel="stylesheet" media="screen" href="/resources/styles/jquery-ui.custom.css">
+	<link type="image/x-icon" rel="icon" href="/resources/icons/favicon.ico">
+	<link type="image/x-icon" rel="shortcut" href="/resources/icons/favicon.ico">
+	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="/resources/scripts/log4javascript.js"></script>
+    <script type="text/javascript">
+        var log = log4javascript.getLogger();
+        var consoleAppender = new log4javascript.BrowserConsoleAppender();
+        log.addAppender(consoleAppender);
+    </script>
+<script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/7/17/%7Bcommon,util,marker,map%7D.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/7/17/%7Bonion%7D.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/7/17/%7Bcontrols%7D.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/7/17/%7Bstats%7D.js"></script><script type="text/javascript" charset="UTF-8" src="http://maps.gstatic.com/cat_js/intl/en_us/mapfiles/api-3/7/17/%7Binfowindow,overlay%7D.js"></script></head><body>
+
+
+<div id="chart" style="width:100%"></div>
+
+<div id="tweet_info" style="width:100%">
+    <div id="map_canvas" style="width: 100%; height: 35%; margin: auto; float: left; position: relative; background-color: rgb(229, 227, 223); overflow: hidden; "><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; "><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; "><div style="position: absolute; left: 0px; top: 0px; z-index: 1; cursor: default; -webkit-transform-origin: 328px 420px; -webkit-transform: matrix(1, 0, 0, 1, 0, 0); "><div style="z-index: 100; position: absolute; left: 0px; top: 0px; "><div style="position: absolute; left: 0px; top: 0px; z-index: 0; "><div style="position: absolute; left: 0px; top: 0px; z-index: 1; "><div style="width: 256px; height: 256px; position: absolute; left: 34px; top: 100px; "></div><div style="width: 256px; height: 256px; position: absolute; left: 290px; top: 100px; "></div><div style="width: 256px; height: 256px; position: absolute; left: 290px; top: -156px; "></div><div style="width: 256px; height: 256px; position: absolute; left: 34px; top: -156px; "></div><div style="width: 256px; height: 256px; position: absolute; left: 34px; top: 356px; "></div><div style="width: 256px; height: 256px; position: absolute; left: 290px; top: 356px; "></div><div style="width: 256px; height: 256px; position: absolute; left: -222px; top: 100px; "></div><div style="width: 256px; height: 256px; position: absolute; left: 546px; top: 100px; "></div><div style="width: 256px; height: 256px; position: absolute; left: -222px; top: 356px; "></div><div style="width: 256px; height: 256px; position: absolute; left: 546px; top: -156px; "></div><div style="width: 256px; height: 256px; position: absolute; left: -222px; top: -156px; "></div><div style="width: 256px; height: 256px; position: absolute; left: 546px; top: 356px; "></div></div></div></div><div style="z-index: 101; position: absolute; left: 0px; top: 0px; "></div><div style="z-index: 102; position: absolute; left: 0px; top: 0px; "><div style="position: absolute; left: 0px; top: 0px; z-index: 0; "><div style="position: absolute; left: 0px; top: 0px; z-index: 1; "><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 34px; top: 100px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 290px; top: 100px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 290px; top: -156px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 34px; top: -156px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 34px; top: 356px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 290px; top: 356px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -222px; top: 100px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 546px; top: 100px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -222px; top: 356px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 546px; top: -156px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -222px; top: -156px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 546px; top: 356px; "></div></div></div></div><div style="z-index: 103; position: absolute; left: 0px; top: 0px; "><div style="position: absolute; left: 0px; top: 0px; z-index: -1; "><div style="position: absolute; left: 0px; top: 0px; z-index: 1; "><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 34px; top: 100px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 290px; top: 100px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 290px; top: -156px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 34px; top: -156px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 34px; top: 356px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 290px; top: 356px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -222px; top: 100px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 546px; top: 100px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -222px; top: 356px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 546px; top: -156px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -222px; top: -156px; "></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 546px; top: 356px; "></div></div></div></div><div style="z-index: 104; position: absolute; left: 0px; top: 0px; "></div><div style="z-index: 105; position: absolute; left: 0px; top: 0px; "><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.1627662830481px; left: 379.04651839999997px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 358.73155084660016px; left: 376.39805617777756px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 415.0517794469954px; left: 316.4513895111113px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 346.88639632536547px; left: 299.94033955555597px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.1706362383143px; left: 378.9756917333334px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 362.3606567391548px; left: 371.95844728888915px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 324.4784006223898px; left: 275.24336533333326px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 370.8237527478809px; left: 286.5753134222223px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 366.7664160697973px; left: 332.9096067555556px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 349.2773792184079px; left: 385.8626606222224px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 377.8525869074193px; left: 104.38314560000026px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 377.8525869074193px; left: 104.38314560000026px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 303.57865137986823px; left: 104.22260515555581px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 396.38409495706617px; left: 220.36325724444487px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 373.9517964732556px; left: 335.40961173333335px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 369.8859962501033px; left: 361.97381582222215px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 407.84747928511104px; left: 305.996349511111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.1627662830481px; left: 379.04651839999997px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 358.73155084660016px; left: 376.39805617777756px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 415.0517794469954px; left: 316.4513895111113px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 346.88639632536547px; left: 299.94033955555597px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.1706362383143px; left: 378.9756917333334px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 362.3606567391548px; left: 371.95844728888915px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 324.4784006223898px; left: 275.24336533333326px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 370.8237527478809px; left: 286.5753134222223px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 366.7664160697973px; left: 332.9096067555556px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 349.2773792184079px; left: 385.8626606222224px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 377.8525869074193px; left: 104.38314560000026px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 377.8525869074193px; left: 104.38314560000026px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 303.57865137986823px; left: 104.22260515555581px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 396.38409495706617px; left: 220.36325724444487px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 373.9517964732556px; left: 335.40961173333335px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 369.8859962501033px; left: 361.97381582222215px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 407.84747928511104px; left: 305.996349511111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 366.8692592967766px; left: 364.20812693333346px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.96757053918316px; left: 378.5492071111116px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.96757053918316px; left: 378.5492071111116px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 407.9164345827587px; left: 306.1733877333336px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.96757053918316px; left: 378.5492071111116px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 303.57865137986823px; left: 104.22260515555581px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 358.50960845159557px; left: 309.98426062222234px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 352.4031936792387px; left: 379.53206506666675px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 434.3616526100086px; left: 258.9145361777778px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 333.0797185355909px; left: 300.79534542222245px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 366.8692592967766px; left: 364.20812693333346px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.96757053918316px; left: 378.5492071111116px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.96757053918316px; left: 378.5492071111116px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 407.9164345827587px; left: 306.1733877333336px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.96757053918316px; left: 378.5492071111116px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 303.57865137986823px; left: 104.22260515555581px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 358.50960845159557px; left: 309.98426062222234px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 352.4031936792387px; left: 379.53206506666675px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 434.3616526100086px; left: 258.9145361777778px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 333.0797185355909px; left: 300.79534542222245px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 344.7462621879265px; left: 326.3363744000003px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 411.3523473909228px; left: 246.9518837333335px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 331.3655062042669px; left: 273.91682908444454px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 368.1953431363162px; left: 374.93885617777823px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 411.3523473909228px; left: 246.9518837333335px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 412.89252384897827px; left: 249.22806506666666px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 412.8932004581694px; left: 249.227496177778px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 412.89252384897827px; left: 249.22806506666666px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 412.8932004581694px; left: 249.22806506666666px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 412.8932004581694px; left: 249.22806506666666px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 430.0485517803611px; left: 281.6723672888893px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 287.32007302088346px; left: 99.46578951111132px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 433.4743214656289px; left: 255.6024650666668px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 360.9714760293971px; left: 298.0112032000002px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 390.1543700644495px; left: 345.6052384000004px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 350.555000376783px; left: 385.72840284444464px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 353.7889664691211px; left: 380.03894506666666px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 294.31319060803946px; left: 98.32197013333325px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 441.6213137331117px; left: 337.40015395555565px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 318.8774417954903px; left: 101.09565617777798px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 440.90351006516903px; left: 336.99339839999993px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 440.90351006516903px; left: 336.99339839999993px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 441.1825657301017px; left: 337.37227840000014px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 440.834861718606px; left: 336.6401184000001px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 440.8711296305114px; left: 337.3665895111112px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 353.7889664691211px; left: 380.03894506666666px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 353.7882119227304px; left: 380.038376177778px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 404.9197012653908px; left: 126.8771317333335px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 339.47820944653836px; left: 351.6370535111114px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 404.07930593838194px; left: 322.53192426666646px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 413.3217405805939px; left: 133.400557866667px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 429.66295396184205px; left: 243.86010346666671px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 378.1339867297779px; left: 304.363069511111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 339.73727545638303px; left: 380.14566293333337px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 379.30051004566906px; left: 103.73944213333334px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 452.2273368996472px; left: 344.5367911111116px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 406.5523020069297px; left: 318.7155672888889px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 409.14867214123365px; left: 163.65295395555586px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 413.1259021634893px; left: 249.13836266666658px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 432.79820523516105px; left: 256.6827850666673px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 369.39008403118874px; left: 361.6962606222223px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 428.5044080949134px; left: 281.2479761777781px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 428.5050679297781px; left: 281.2479761777781px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 428.4760345555219px; left: 281.3481006222223px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 406.3046914435979px; left: 283.73003840000047px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 457.4794794271297px; left: 343.8155139555556px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 288.5752215445633px; left: 99.47510222222218px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 431.2264241530863px; left: 285.3052917333339px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 403.6042778488128px; left: 127.86130951111136px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 415.49718685811786px; left: 309.28564231111113px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 343.7463100950936px; left: 325.92064746666665px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 343.7463100950936px; left: 325.92064746666665px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 333.5631495685634px; left: 348.4474072888893px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 410.54601671786224px; left: 305.66795839999986px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 323.2603545616969px; left: 269.3238261333331px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 370.87253547103387px; left: 362.6275317333334px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 358.932484868599px; left: 375.9611495111112px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 364.42156545807643px; left: 308.9318161777778px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.8314653119696px; left: 380.94469582222246px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 403.48329632734215px; left: 126.48061617777785px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 370.87253547103387px; left: 362.6275317333334px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 408.73266967771247px; left: 347.87987804444447px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 436.9094399627835px; left: 332.43308551111113px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 339.6901476683088px; left: 351.8209184000002px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 393.6183581897478px; left: 359.9173450666667px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 406.700681509721px; left: 320.739105066667px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 373.1373697474402px; left: 351.3749095111111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 349.6213406224415px; left: 336.4129667555558px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 348.8766773747609px; left: 297.7355139555557px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 365.44006000144645px; left: 343.85078506666696px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 355.306302415829px; left: 336.37672284444443px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 373.2608490314085px; left: 109.08626951111137px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 391.47529063963464px; left: 351.402216177778px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 403.8289891422029px; left: 129.8125984000003px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 324.635908212475px; left: 270.1670446222224px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 403.3629771989306px; left: 345.9499850666666px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 366.3821662234452px; left: 363.3440262400004px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 403.8360657930142px; left: 126.84766328888918px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 358.1335024553414px; left: 313.64619840000023px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 388.27091781971944px; left: 264.38171768888924px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 417.7003343928442px; left: 264.6375584000002px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 320.2607404496132px; left: 369.63567395555583px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 349.92801241133316px; left: 302.35659840000017px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 360.02389531775134px; left: 374.47919395555573px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 344.7462621879265px; left: 326.3363744000003px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 411.3523473909228px; left: 246.9518837333335px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 331.3655062042669px; left: 273.91682908444454px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 368.1953431363162px; left: 374.93885617777823px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 411.3523473909228px; left: 246.9518837333335px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 430.0485517803611px; left: 281.6723672888893px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 347.3676765486016px; left: 390.81426951111143px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 370.87253547103387px; left: 362.6275317333334px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 412.82553577476017px; left: 246.2101095111111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 294.31319060803946px; left: 98.32197013333325px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 441.6213137331117px; left: 337.40015395555565px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 318.8774417954903px; left: 101.09565617777798px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 440.90351006516903px; left: 336.99339839999993px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 440.90351006516903px; left: 336.99339839999993px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 441.1825657301017px; left: 337.37227840000014px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 440.834861718606px; left: 336.6401184000001px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 440.8711296305114px; left: 337.3665895111112px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 441.00128965016665px; left: 336.7123672888888px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 404.9197012653908px; left: 126.8771317333335px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 339.47820944653836px; left: 351.6370535111114px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 404.07930593838194px; left: 322.53192426666646px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 413.3217405805939px; left: 133.400557866667px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 429.66295396184205px; left: 243.86010346666671px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 378.1339867297779px; left: 304.363069511111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 339.73727545638303px; left: 380.14566293333337px; width: 4px; height: 4px; cursor: default; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 429.22586358972296px; left: 335.41643840000006px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 429.22586358972296px; left: 335.41643840000006px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 404.2298041062526px; left: 126.00861475555575px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 432.79820523516105px; left: 256.6827850666673px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 369.39008403118874px; left: 361.6962606222223px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 408.3065292799613px; left: 331.76417173333357px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 342.00414580795587px; left: 295.8496415999998px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 342.00414580795587px; left: 295.8496415999998px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 428.5044080949134px; left: 281.2479761777781px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 428.5050679297781px; left: 281.2479761777781px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 428.4760345555219px; left: 281.3481006222223px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 406.3046914435979px; left: 283.73003840000047px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 457.4794794271297px; left: 343.8155139555556px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 288.5752215445633px; left: 99.47510222222218px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 431.2264241530863px; left: 285.3052917333339px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 403.6042778488128px; left: 127.86130951111136px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.08962533615795px; left: 379.0515530666671px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 286.92086178608736px; left: 99.40359857777776px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.08962533615795px; left: 379.0515530666671px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 343.7463100950936px; left: 325.92064746666665px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 343.7463100950936px; left: 325.92064746666665px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 333.5631495685634px; left: 348.4474072888893px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 323.2603545616969px; left: 269.3238261333331px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 404.02476761126013px; left: 130.06575395555546px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 370.87253547103387px; left: 362.6275317333334px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 358.932484868599px; left: 375.9611495111112px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 364.42156545807643px; left: 308.9318161777778px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.8314653119696px; left: 380.94469582222246px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 370.87253547103387px; left: 362.6275317333334px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 408.73266967771247px; left: 347.87987804444447px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 436.9094399627835px; left: 332.43308551111113px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 339.6901476683088px; left: 351.8209184000002px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 393.6183581897478px; left: 359.9173450666667px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 406.700681509721px; left: 320.739105066667px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 373.1373697474402px; left: 351.3749095111111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 349.6213406224415px; left: 336.4129667555558px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 365.44006000144645px; left: 343.85078506666696px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 355.306302415829px; left: 336.37672284444443px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 373.2608490314085px; left: 109.08626951111137px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 391.47529063963464px; left: 351.402216177778px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 403.8289891422029px; left: 129.8125984000003px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 324.635908212475px; left: 270.1670446222224px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 348.5750969285482px; left: 301.1196519111113px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 358.1335024553414px; left: 313.64619840000023px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 358.1335024553414px; left: 313.6467672888889px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 414.53913213156886px; left: 267.1134652444448px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 369.1295419264354px; left: 361.6097895111111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 406.65145375492375px; left: 351.1536117333335px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 431.8020953136255px; left: 287.575943466667px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 417.7003343928442px; left: 264.6375584000002px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 320.2607404496132px; left: 369.63567395555583px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 366.76420985510856px; left: 332.8598915555558px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 369.5122595052786px; left: 117.48136284444445px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 357.03047792045777px; left: 378.8135584000006px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 415.44201405059493px; left: 287.14457834666655px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 413.1441700321934px; left: 245.87503395555586px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 350.70232152894266px; left: 298.323745066667px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 370.4725660723652px; left: 286.2957272888889px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 350.78279796408606px; left: 385.6109102222226px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 360.977597510466px; left: 323.57444728888913px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 433.27013167158873px; left: 257.34322183111135px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 414.6113684695066px; left: 276.0779139555557px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 409.0363193601336px; left: 131.40605617777783px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 357.03047792045777px; left: 378.8135584000006px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 415.44201405059493px; left: 287.14457834666655px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 392.607460292568px; left: 356.5053372444445px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 348.3627509145375px; left: 396.73128284444465px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 413.258458457551px; left: 133.3971672888888px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 369.175944111415px; left: 263.0696721777781px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 403.4874211124413px; left: 124.98955840000008px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 441.3361530838133px; left: 336.5323879111111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 452.0491129224855px; left: 344.50252693333323px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 374.6309710636491px; left: 100.74180728888905px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 388.49012504941766px; left: 264.1397806222226px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 404.6477017023051px; left: 126.71900906666679px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 388.66305674413536px; left: 144.02685617777797px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 361.7097073627633px; left: 327.8388384px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.27876047007476px; left: 381.76324728888903px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 342.00414580795587px; left: 295.8496415999998px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 342.00414580795587px; left: 295.8496415999998px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 452.65531579760045px; left: 344.53515840000046px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 405.06301010049947px; left: 127.48811840000008px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 368.53038336357133px; left: 363.73003840000047px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 368.53184914554356px; left: 363.73060728888913px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 373.5287717094275px; left: 372.39250951111126px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 403.4874211124413px; left: 124.98955840000008px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 441.3361530838133px; left: 336.5323879111111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 452.0491129224855px; left: 344.50252693333323px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 374.6309710636491px; left: 100.74180728888905px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 383.1331424950396px; left: 364.81584817777775px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 459.116979795273px; left: 228.98130951111125px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.48443224460266px; left: 378.87841173333345px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 381.6562779452022px; left: 363.04054506666716px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 434.4715044520284px; left: 239.21505173333344px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 434.5192320056616px; left: 239.1280117333331px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 367.4320769788741px; left: 365.0327939555559px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 288.3508510008012px; left: 101.08557034666683px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 443.0695241947327px; left: 329.18989262222203px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 332.76941068329097px; left: 347.0445272888892px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.1338386258511px; left: 163.35770062222264px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 383.1331424950396px; left: 364.81584817777775px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 324.84425043102567px; left: 269.70283128888923px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 444.2923812191334px; left: 329.2124832000004px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 407.40172969151615px; left: 309.9677628444447px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 433.40883674161125px; left: 255.7651672888892px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 452.51774187188335px; left: 339.44132728888917px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 366.2246900499779px; left: 375.3803139555557px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 432.8440878396186px; left: 283.41032284444464px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 352.1080081243558px; left: 253.31496284444484px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 418.9235323347805px; left: 281.46984284444443px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 370.9275874782302px; left: 286.0239576888889px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 357.89258680474325px; left: 312.60626951111135px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 415.9626125930954px; left: 286.7832650666669px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 351.78256223770484px; left: 329.7651303111111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 364.83130306943474px; left: 359.4421294222225px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 364.83130306943474px; left: 359.4421294222225px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 351.5087688816825px; left: 336.2111761777778px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 324.54063364128467px; left: 267.68282062222215px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 364.83130306943474px; left: 359.4421294222225px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 369.26861159939176px; left: 374.36143395555564px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 305.20640685628086px; left: 103.05832284444432px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 392.607460292568px; left: 356.5053372444445px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 348.3627509145375px; left: 396.73128284444465px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 413.258458457551px; left: 133.3971672888888px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 369.175944111415px; left: 263.0696721777781px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 376.628660072584px; left: 319.25771271111125px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 403.4874211124413px; left: 124.98955840000008px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 387.30850011225607px; left: 265.39076728888904px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 388.49012504941766px; left: 264.1397806222226px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 412.87087195338347px; left: 246.13786062222243px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 349.8527200687013px; left: 300.9650961777779px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.7590897319735px; left: 379.2165308444446px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 361.7097073627633px; left: 327.8388384px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 342.00414580795587px; left: 295.8496415999998px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 342.00414580795587px; left: 295.8496415999998px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 452.65531579760045px; left: 344.53515840000046px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 373.5287717094275px; left: 372.39250951111126px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 376.628660072584px; left: 319.25771271111125px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 376.628660072584px; left: 319.25771271111125px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 403.4874211124413px; left: 124.98955840000008px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 383.1331424950396px; left: 364.81584817777775px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 459.116979795273px; left: 228.98130951111125px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.48443224460266px; left: 378.87841173333345px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 381.6562779452022px; left: 363.04054506666716px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 434.4715044520284px; left: 239.21505173333344px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 434.5192320056616px; left: 239.1280117333331px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 414.5013844445165px; left: 267.0280295111111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 406.039865089507px; left: 319.94834951111125px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 356.1338386258511px; left: 163.35770062222264px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 383.1331424950396px; left: 364.81584817777775px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 324.84425043102567px; left: 269.70283128888923px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 370.0090160128367px; left: 362.30584042666715px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 432.8440878396186px; left: 283.41032284444464px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 352.1080081243558px; left: 253.31496284444484px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 418.9235323347805px; left: 281.46984284444443px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 370.9275874782302px; left: 286.0239576888889px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 357.89258680474325px; left: 312.60626951111135px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 362.67358723641905px; left: 373.62244728888936px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 324.36172522909226px; left: 268.3017717333332px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 351.78256223770484px; left: 329.7651303111111px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 305.20640685628086px; left: 103.05832284444432px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 349.92801241133316px; left: 302.35659840000017px; width: 4px; height: 4px; "></canvas><canvas width="4" height="4" style="position: absolute; visibility: visible; top: 360.02389531775134px; left: 374.47919395555573px; width: 4px; height: 4px; "></canvas></div><div style="z-index: 106; position: absolute; left: 0px; top: 0px; "><div style="display: none; "><div style="width: 107px; height: 137px; overflow: hidden; position: absolute; left: 21px; top: 26px; "><img style="position: absolute; left: -784px; top: -102px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; -webkit-user-drag: none; width: 1029px; height: 255px; " src="http://maps.gstatic.com/mapfiles/cb/mod_cb_scout/cb_scout_sprite_api_003.png"><div style="position: absolute; left: 7px; top: 5px; width: 94px; height: 75px; background-color: rgb(211, 211, 211); z-index: 1; "></div><div style="width: 95px; bottom: 38px; z-index: 1; left: 7px; font-family: Arial, sans-serif; font-size: 9px; color: gray; background-color: white; position: absolute; ">Loading...</div><img style="position: absolute; left: 7px; top: 5px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; opacity: 0.25; width: 94px; height: 75px; " src="http://maps.gstatic.com/mapfiles/transparent.png"></div><div style="width: 21px; height: 26px; overflow: hidden; position: absolute; left: 63px; top: 127px; "><img style="position: absolute; left: -441px; top: -102px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; -webkit-user-drag: none; width: 1029px; height: 255px; " src="http://maps.gstatic.com/mapfiles/cb/mod_cb_scout/cb_scout_sprite_api_003.png"></div></div></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px; "><div style="overflow: hidden; width: 640px; height: 500px; "></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0; "><div style="position: absolute; left: 0px; top: 0px; z-index: 1; "><div style="position: absolute; left: 34px; top: 100px; -webkit-transition: opacity 200ms ease-out; opacity: 1; width: 256px; height: 256px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 256px; height: 256px; " src="http://mt1.googleapis.com/vt?lyrs=m@177000000&amp;src=apiv3&amp;hl=en-US&amp;x=1&amp;y=2&amp;z=3&amp;apistyle=p.il%3Atrue%7Cp.s%3A-56%7Cp.l%3A-56%7Cp.v%3Asimplified%2Cs.t%3A3%7Cp.v%3Asimplified%7Cp.l%3A-34%7Cp.s%3A-44%7Cp.h%3A%2300f6ff%2Cs.t%3A3%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A6%7Cp.h%3A%230066ff%7Cp.il%3Atrue%7Cp.s%3A-68%7Cp.l%3A-71&amp;s=Galil&amp;style=api%7Csmartmaps"></div><div style="position: absolute; left: 290px; top: 100px; -webkit-transition: opacity 200ms ease-out; opacity: 1; width: 256px; height: 256px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 256px; height: 256px; " src="http://mt0.googleapis.com/vt?lyrs=m@177000000&amp;src=apiv3&amp;hl=en-US&amp;x=2&amp;y=2&amp;z=3&amp;apistyle=p.il%3Atrue%7Cp.s%3A-56%7Cp.l%3A-56%7Cp.v%3Asimplified%2Cs.t%3A3%7Cp.v%3Asimplified%7Cp.l%3A-34%7Cp.s%3A-44%7Cp.h%3A%2300f6ff%2Cs.t%3A3%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A6%7Cp.h%3A%230066ff%7Cp.il%3Atrue%7Cp.s%3A-68%7Cp.l%3A-71&amp;s=&amp;style=api%7Csmartmaps"></div><div style="position: absolute; left: 290px; top: -156px; -webkit-transition: opacity 200ms ease-out; opacity: 1; width: 256px; height: 256px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 256px; height: 256px; " src="http://mt0.googleapis.com/vt?lyrs=m@177000000&amp;src=apiv3&amp;hl=en-US&amp;x=2&amp;y=1&amp;z=3&amp;apistyle=p.il%3Atrue%7Cp.s%3A-56%7Cp.l%3A-56%7Cp.v%3Asimplified%2Cs.t%3A3%7Cp.v%3Asimplified%7Cp.l%3A-34%7Cp.s%3A-44%7Cp.h%3A%2300f6ff%2Cs.t%3A3%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A6%7Cp.h%3A%230066ff%7Cp.il%3Atrue%7Cp.s%3A-68%7Cp.l%3A-71&amp;s=Galileo&amp;style=api%7Csmartmaps"></div><div style="position: absolute; left: 34px; top: -156px; -webkit-transition: opacity 200ms ease-out; opacity: 1; width: 256px; height: 256px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 256px; height: 256px; " src="http://mt1.googleapis.com/vt?lyrs=m@177000000&amp;src=apiv3&amp;hl=en-US&amp;x=1&amp;y=1&amp;z=3&amp;apistyle=p.il%3Atrue%7Cp.s%3A-56%7Cp.l%3A-56%7Cp.v%3Asimplified%2Cs.t%3A3%7Cp.v%3Asimplified%7Cp.l%3A-34%7Cp.s%3A-44%7Cp.h%3A%2300f6ff%2Cs.t%3A3%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A6%7Cp.h%3A%230066ff%7Cp.il%3Atrue%7Cp.s%3A-68%7Cp.l%3A-71&amp;s=Gali&amp;style=api%7Csmartmaps"></div><div style="position: absolute; left: 34px; top: 356px; -webkit-transition: opacity 200ms ease-out; opacity: 1; width: 256px; height: 256px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 256px; height: 256px; " src="http://mt1.googleapis.com/vt?lyrs=m@177000000&amp;src=apiv3&amp;hl=en-US&amp;x=1&amp;y=3&amp;z=3&amp;apistyle=p.il%3Atrue%7Cp.s%3A-56%7Cp.l%3A-56%7Cp.v%3Asimplified%2Cs.t%3A3%7Cp.v%3Asimplified%7Cp.l%3A-34%7Cp.s%3A-44%7Cp.h%3A%2300f6ff%2Cs.t%3A3%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A6%7Cp.h%3A%230066ff%7Cp.il%3Atrue%7Cp.s%3A-68%7Cp.l%3A-71&amp;s=Galile&amp;style=api%7Csmartmaps"></div><div style="position: absolute; left: 290px; top: 356px; -webkit-transition: opacity 200ms ease-out; opacity: 1; width: 256px; height: 256px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 256px; height: 256px; " src="http://mt0.googleapis.com/vt?lyrs=m@177000000&amp;src=apiv3&amp;hl=en-US&amp;x=2&amp;y=3&amp;z=3&amp;apistyle=p.il%3Atrue%7Cp.s%3A-56%7Cp.l%3A-56%7Cp.v%3Asimplified%2Cs.t%3A3%7Cp.v%3Asimplified%7Cp.l%3A-34%7Cp.s%3A-44%7Cp.h%3A%2300f6ff%2Cs.t%3A3%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A6%7Cp.h%3A%230066ff%7Cp.il%3Atrue%7Cp.s%3A-68%7Cp.l%3A-71&amp;s=G&amp;style=api%7Csmartmaps"></div><div style="position: absolute; left: -222px; top: 100px; -webkit-transition: opacity 200ms ease-out; opacity: 1; width: 256px; height: 256px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 256px; height: 256px; " src="http://mt0.googleapis.com/vt?lyrs=m@177000000&amp;src=apiv3&amp;hl=en-US&amp;x=0&amp;y=2&amp;z=3&amp;apistyle=p.il%3Atrue%7Cp.s%3A-56%7Cp.l%3A-56%7Cp.v%3Asimplified%2Cs.t%3A3%7Cp.v%3Asimplified%7Cp.l%3A-34%7Cp.s%3A-44%7Cp.h%3A%2300f6ff%2Cs.t%3A3%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A6%7Cp.h%3A%230066ff%7Cp.il%3Atrue%7Cp.s%3A-68%7Cp.l%3A-71&amp;s=Ga&amp;style=api%7Csmartmaps"></div><div style="position: absolute; left: 546px; top: 100px; -webkit-transition: opacity 200ms ease-out; opacity: 1; width: 256px; height: 256px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 256px; height: 256px; " src="http://mt1.googleapis.com/vt?lyrs=m@177000000&amp;src=apiv3&amp;hl=en-US&amp;x=3&amp;y=2&amp;z=3&amp;apistyle=p.il%3Atrue%7Cp.s%3A-56%7Cp.l%3A-56%7Cp.v%3Asimplified%2Cs.t%3A3%7Cp.v%3Asimplified%7Cp.l%3A-34%7Cp.s%3A-44%7Cp.h%3A%2300f6ff%2Cs.t%3A3%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A6%7Cp.h%3A%230066ff%7Cp.il%3Atrue%7Cp.s%3A-68%7Cp.l%3A-71&amp;s=Gal&amp;style=api%7Csmartmaps"></div><div style="position: absolute; left: -222px; top: 356px; -webkit-transition: opacity 200ms ease-out; opacity: 1; width: 256px; height: 256px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 256px; height: 256px; " src="http://mt0.googleapis.com/vt?lyrs=m@177000000&amp;src=apiv3&amp;hl=en-US&amp;x=0&amp;y=3&amp;z=3&amp;apistyle=p.il%3Atrue%7Cp.s%3A-56%7Cp.l%3A-56%7Cp.v%3Asimplified%2Cs.t%3A3%7Cp.v%3Asimplified%7Cp.l%3A-34%7Cp.s%3A-44%7Cp.h%3A%2300f6ff%2Cs.t%3A3%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A6%7Cp.h%3A%230066ff%7Cp.il%3Atrue%7Cp.s%3A-68%7Cp.l%3A-71&amp;s=Gal&amp;style=api%7Csmartmaps"></div><div style="position: absolute; left: 546px; top: -156px; -webkit-transition: opacity 200ms ease-out; opacity: 1; width: 256px; height: 256px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 256px; height: 256px; " src="http://mt1.googleapis.com/vt?lyrs=m@177000000&amp;src=apiv3&amp;hl=en-US&amp;x=3&amp;y=1&amp;z=3&amp;apistyle=p.il%3Atrue%7Cp.s%3A-56%7Cp.l%3A-56%7Cp.v%3Asimplified%2Cs.t%3A3%7Cp.v%3Asimplified%7Cp.l%3A-34%7Cp.s%3A-44%7Cp.h%3A%2300f6ff%2Cs.t%3A3%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A6%7Cp.h%3A%230066ff%7Cp.il%3Atrue%7Cp.s%3A-68%7Cp.l%3A-71&amp;s=Ga&amp;style=api%7Csmartmaps"></div><div style="position: absolute; left: -222px; top: -156px; -webkit-transition: opacity 200ms ease-out; opacity: 1; width: 256px; height: 256px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 256px; height: 256px; " src="http://mt0.googleapis.com/vt?lyrs=m@177000000&amp;src=apiv3&amp;hl=en-US&amp;x=0&amp;y=1&amp;z=3&amp;apistyle=p.il%3Atrue%7Cp.s%3A-56%7Cp.l%3A-56%7Cp.v%3Asimplified%2Cs.t%3A3%7Cp.v%3Asimplified%7Cp.l%3A-34%7Cp.s%3A-44%7Cp.h%3A%2300f6ff%2Cs.t%3A3%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A6%7Cp.h%3A%230066ff%7Cp.il%3Atrue%7Cp.s%3A-68%7Cp.l%3A-71&amp;s=G&amp;style=api%7Csmartmaps"></div><div style="position: absolute; left: 546px; top: 356px; -webkit-transition: opacity 200ms ease-out; opacity: 1; width: 256px; height: 256px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 256px; height: 256px; " src="http://mt1.googleapis.com/vt?lyrs=m@177000000&amp;src=apiv3&amp;hl=en-US&amp;x=3&amp;y=3&amp;z=3&amp;apistyle=p.il%3Atrue%7Cp.s%3A-56%7Cp.l%3A-56%7Cp.v%3Asimplified%2Cs.t%3A3%7Cp.v%3Asimplified%7Cp.l%3A-34%7Cp.s%3A-44%7Cp.h%3A%2300f6ff%2Cs.t%3A3%7Cs.e%3Al%7Cp.v%3Aoff%2Cs.t%3A6%7Cp.h%3A%230066ff%7Cp.il%3Atrue%7Cp.s%3A-68%7Cp.l%3A-71&amp;s=Gali&amp;style=api%7Csmartmaps"></div></div></div></div></div><div style="margin: 2px 5px 2px 2px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px; "><a style="position: static; overflow: visible; float: none; display: inline; " title="Click to see this area on Google Maps" target="_blank" href="http://maps.google.com/maps?ll=53.586373,-84.715383&amp;z=3&amp;t=m&amp;hl=en-US"><div style="width: 62px; height: 24px; cursor: pointer; "><img style="position: absolute; left: 0px; top: 0px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 62px; height: 24px; " src="http://maps.gstatic.com/mapfiles/google_white.png"></div></a></div><div class="gmnoprint" style="position: absolute; z-index: 1000001; right: 0px; bottom: 0px; "><div style="height: 19px; -webkit-user-select: none; line-height: 19px; padding-right: 2px; padding-left: 50px; background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.496094) 50px); font-family: Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; background-position: initial initial; background-repeat: initial initial; "><a style="color: rgb(68, 68, 68); text-decoration: underline; cursor: pointer; display: none; ">Map Data</a><span style="">Map data ©2012 Google, INEGI, MapLink, Tele Atlas</span><span style=""> - </span><a style="color: rgb(68, 68, 68); text-decoration: underline; cursor: pointer; " href="http://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank">Terms of Use</a></div></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Arial, sans-serif; color: rgb(34, 34, 34); -webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 4px 16px; box-shadow: rgba(0, 0, 0, 0.199219) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 170px; top: 160px; "><div style="padding: 0px 0px 10px; font-size: 16px; ">Map Data</div><div style="font-size: 13px; ">Map data ©2012 Google, INEGI, MapLink, Tele Atlas</div><div style="width: 10px; height: 10px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer; "><img style="position: absolute; left: -18px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; -webkit-user-drag: none; width: 68px; height: 67px; " src="http://maps.gstatic.com/mapfiles/mv/imgs8.png"></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px; "><div style="font-family: Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245); ">Map data ©2012 Google, INEGI, MapLink, Tele Atlas</div></div><div class="gmnoprint" style="margin: 5px; -webkit-user-select: none; position: absolute; left: 0px; top: 0px; " controlwidth="32" controlheight="84"><div style="cursor: url(http://maps.gstatic.com/mapfiles/openhand_8_8.cur), default; position: absolute; left: 0px; top: 0px; " controlwidth="32" controlheight="40"><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; "><img style="position: absolute; left: -9px; top: -102px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; -webkit-user-drag: none; width: 1029px; height: 255px; " src="http://maps.gstatic.com/mapfiles/cb/mod_cb_scout/cb_scout_sprite_api_003.png"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden; "><img style="position: absolute; left: -107px; top: -102px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; -webkit-user-drag: none; width: 1029px; height: 255px; " src="http://maps.gstatic.com/mapfiles/cb/mod_cb_scout/cb_scout_sprite_api_003.png"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden; "><img style="position: absolute; left: -58px; top: -102px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; -webkit-user-drag: none; width: 1029px; height: 255px; " src="http://maps.gstatic.com/mapfiles/cb/mod_cb_scout/cb_scout_sprite_api_003.png"></div><div style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden; "><img style="position: absolute; left: -205px; top: -102px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; -webkit-user-drag: none; width: 1029px; height: 255px; " src="http://maps.gstatic.com/mapfiles/cb/mod_cb_scout/cb_scout_sprite_api_003.png"></div></div><div class="gmnoprint" style="position: absolute; opacity: 0.6; display: none; " controlwidth="0" controlheight="0"><img src="http://maps.gstatic.com/mapfiles/rotate2.png" style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; cursor: pointer; width: 22px; height: 22px; " title="Rotate map 90 degrees"></div><div class="gmnoprint" controlwidth="22" controlheight="39" style="position: absolute; left: 5px; top: 45px; "><img style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 22px; height: 39px; " src="http://maps.gstatic.com/mapfiles/szc4.png"><div style="position: absolute; left: 0px; top: 0px; width: 22px; height: 17px; cursor: pointer; " title="Zoom in"></div><div style="position: absolute; left: 0px; top: 18px; width: 22px; height: 17px; cursor: pointer; " title="Zoom out"></div></div></div></div></div>
+</div>
+
+
+<style>
+	body{background:#2F3135}
+	ul{display:inline}
+	li{text-shadow: #555 1px 0px;list-style:none; padding:10px; float:left; width:30%}
+	.month{float:left;clear:both}
+	 .month>li{font-size: 35px; color:white; font-family:helvetica;width:1%}
+	.month>li>a{;font-size: 35px;color:white}
+	.snippets{width: 100%; height: 350px; text-shadow: none}
+	.snippets>div{float: left; width: 50%}
+	.snippets>div .snippet{min-height: 150px; max-height: 240px; background-color: white}
+	a{font-size:x-large}
+	a.Anthrax{color:#0000FE!important;}
+	a.Cholera{color:#FC0008 !important;}
+	a.Common-Cold{color: #1EFF09 !important;}
+	a.Dengue{color: #FC00A9 !important;}
+	a.Diphtheria{color: #FECC0B !important;}
+	a.Gastroenteritis{color: #084702 !important;}
+	a.Influenza{color: #7068FE !important;}
+	a.Legionnaires-Disease{color: #8B3C35 !important;}
+	a.Malaria{color: #1EFFB4 !important;}
+	a.Measles{color: #0D7083 !important;}
+	a.Meningitis{color: #000067 !important;}
+	a.Mosquito-Borne-Disease{color: #85CE3F !important;}
+	a.Mumps{color: #F287D2 !important;}
+	a.Pertussis{color: #C600FE !important;}
+	a.Pneumonia{color: #670656 !important;}
+	a.Polio{color: #F1004E !important;}
+	a.STD{color: #FEB470 !important;}
+	a.Rabies{color: #7A9868 !important;}
+	a.Tuberculosis{color: #F16E0C !important;}
+	a.Tetanus{color: #706005 !important;}
+	a.Diptheria{color: #64F5FF !important;}
+	a.Smallpox{color: #8DB1FF !important;}
+	a.Tick-Borne-Disease{color: #5E4C68 !important;}
+	a.Typhoid{color: #0FA6C5 !important;}
+	a.Varicella{color: #0949FE !important;}
+	
+</style>
+
+<ul class="month"><li> May </li><li>
+</li><li><a href="/diseases/2012-05-31">
+				31
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-30">
+				30
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-29">
+				29
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-28">
+				28
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-27">
+				27
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-26">
+				26
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-25">
+				25
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-24">
+				24
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-23">
+				23
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-22">
+				22
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-21">
+				21
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-20">
+				20
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-19">
+				19
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-18">
+				18
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-17">
+				17
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-16">
+				16
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-15">
+				15
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-14">
+				14
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-13">
+				13
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-12">
+				12
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-11">
+				11
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-10">
+				10
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-9">
+				9
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-8">
+				8
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-7">
+				7
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-6">
+				6
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-5">
+				5
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-4">
+				4
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-3">
+				3
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-2">
+				2
+		</a></li><li>
+
+</li><li><a href="/diseases/2012-05-1">
+				1
+		</a></li><li>
+</li></ul>
+<ul id="histogram"><li>
+<div class="histogram">
+<a class="STD" href="/diseases/2012-05-25/all/STD">
+STD [115]
+</a>
+<span id="STD"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="36" x2="36" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/25 22:00:00</text><text x="36" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 36,70)">05/26</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">8</text></g><rect x="20" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="28" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="172" y="22" height="38" width="2" fill="#FEB470"></rect><rect x="172" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="164" y="10" height="50" width="2" fill="#FEB470"></rect><rect x="155.99999999999997" y="22" height="38" width="2" fill="#FEB470"></rect><rect x="172" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="164" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="92" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="36" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="123.99999999999999" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="92" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="76" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="52" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="172" y="22" height="38" width="2" fill="#FEB470"></rect><rect x="172" y="35" height="25" width="2" fill="#FEB470"></rect><rect x="164" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="116" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="108" y="35" height="25" width="2" fill="#FEB470"></rect><rect x="92" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="84" y="35" height="25" width="2" fill="#FEB470"></rect><rect x="140" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="92" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="172" y="54" height="6" width="2" fill="#FEB470"></rect><rect x="164" y="35" height="25" width="2" fill="#FEB470"></rect><rect x="148" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="172" y="54" height="6" width="2" fill="#FEB470"></rect><rect x="155.99999999999997" y="41" height="19" width="2" fill="#FEB470"></rect><rect x="164" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="68" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="36" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="155.99999999999997" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="172" y="54" height="6" width="2" fill="#FEB470"></rect><rect x="164" y="10" height="50" width="2" fill="#FEB470"></rect><rect x="155.99999999999997" y="22" height="38" width="2" fill="#FEB470"></rect><rect x="60" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="164" y="47" height="13" width="2" fill="#FEB470"></rect><rect x="140" y="54" height="6" width="2" fill="#FEB470"></rect><rect x="155.99999999999997" y="41" height="19" width="2" fill="#FEB470"></rect><rect x="52" y="54" height="6" width="2" fill="#FEB470"></rect><rect x="44" y="47" height="13" width="2" fill="#FEB470"></rect></svg></span>
+</div>
+<div id="STD" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #FEB470">
+<a href="#" class="map-link" alt="show _yellow_fellow on the map">
+<font style="color:#FEB470; font-size:large">
+<span class="fn org">_yellow_fellow</span>
+[STD]
+</font>
+</a>
+<div class="announcement">@erikzmartell hahaha you're a pussy if you haven't contracted <span style="background-color:#999999">Syphilis</span>.</div>
+<div class="timeStamp">Fri, 25 May 2012 22:02:04 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #FEB470">
+<a href="#" class="map-link" alt="show DAMUZIKGOD on the map">
+<font style="color:#FEB470; font-size:large">
+<span class="fn org">DAMUZIKGOD</span>
+[STD]
+</font>
+</a>
+<div class="announcement">@LickMy_Check it was a quote from how hi when buddy askd to hit his blunt that he had the <span style="background-color:#999999">herp</span></div>
+<div class="timeStamp">Fri, 25 May 2012 23:01:17 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #FEB470">
+<a href="#" class="map-link" alt="show _yellow_fellow on the map">
+<font style="color:#FEB470; font-size:large">
+<span class="fn org">_yellow_fellow</span>
+[STD]
+</font>
+</a>
+<div class="announcement">@erikzmartell hahaha you're a pussy if you haven't contracted <span style="background-color:#999999">Syphilis</span>.</div>
+<div class="timeStamp">Fri, 25 May 2012 22:02:04 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #FEB470">
+<a href="#" class="map-link" alt="show DAMUZIKGOD on the map">
+<font style="color:#FEB470; font-size:large">
+<span class="fn org">DAMUZIKGOD</span>
+[STD]
+</font>
+</a>
+<div class="announcement">@LickMy_Check it was a quote from how hi when buddy askd to hit his blunt that he had the <span style="background-color:#999999">herp</span></div>
+<div class="timeStamp">Fri, 25 May 2012 23:01:17 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Gastroenteritis" href="/diseases/2012-05-25/all/Gastroenteritis">
+Gastroenteritis [38]
+</a>
+<span id="Gastroenteritis"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="102.16216216216216" x2="102.16216216216216" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/25 04:00:00</text><text x="102.16216216216216" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 102.16216216216216,70)">05/26</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">5</text></g><rect x="85.72972972972974" y="40" height="20" width="2" fill="#084702"></rect><rect x="20" y="40" height="20" width="2" fill="#084702"></rect><rect x="122.7027027027027" y="40" height="20" width="2" fill="#084702"></rect><rect x="118.5945945945946" y="40" height="20" width="2" fill="#084702"></rect><rect x="167.89189189189187" y="10" height="50" width="2" fill="#084702"></rect><rect x="118.5945945945946" y="40" height="20" width="2" fill="#084702"></rect><rect x="167.89189189189187" y="40" height="20" width="2" fill="#084702"></rect><rect x="167.89189189189187" y="30" height="30" width="2" fill="#084702"></rect><rect x="163.78378378378378" y="20" height="40" width="2" fill="#084702"></rect><rect x="155.56756756756758" y="40" height="20" width="2" fill="#084702"></rect><rect x="147.35135135135135" y="40" height="20" width="2" fill="#084702"></rect><rect x="139.13513513513513" y="50" height="10" width="2" fill="#084702"></rect><rect x="135.02702702702703" y="40" height="20" width="2" fill="#084702"></rect><rect x="110.37837837837839" y="40" height="20" width="2" fill="#084702"></rect><rect x="172" y="50" height="10" width="2" fill="#084702"></rect><rect x="172" y="50" height="10" width="2" fill="#084702"></rect><rect x="172" y="30" height="30" width="2" fill="#084702"></rect></svg></span>
+</div>
+<div id="Gastroenteritis" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #084702">
+<a href="#" class="map-link" alt="show Mrs_Burns_2012 on the map">
+<font style="color:#084702; font-size:large">
+<span class="fn org">Mrs_Burns_2012</span>
+[Gastroenteritis]
+</font>
+</a>
+<div class="announcement">@_JohnnaChris_ hes projectile <span style="background-color:#999999">vomitting</span> , screaming for no reason , refusing bottles here &amp; their , its not getting any better..</div>
+<div class="timeStamp">Fri, 25 May 2012 20:04:35 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #084702">
+<a href="#" class="map-link" alt="show taylorsalvat0re on the map">
+<font style="color:#084702; font-size:large">
+<span class="fn org">taylorsalvat0re</span>
+[Gastroenteritis]
+</font>
+</a>
+<div class="announcement">that bitch just gave birth ... Brb <span style="background-color:#999999">vomitting</span></div>
+<div class="timeStamp">Fri, 25 May 2012 04:58:49 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #084702">
+<a href="#" class="map-link" alt="show Mrs_Burns_2012 on the map">
+<font style="color:#084702; font-size:large">
+<span class="fn org">Mrs_Burns_2012</span>
+[Gastroenteritis]
+</font>
+</a>
+<div class="announcement">@_JohnnaChris_ hes projectile <span style="background-color:#999999">vomitting</span> , screaming for no reason , refusing bottles here &amp; their , its not getting any better..</div>
+<div class="timeStamp">Fri, 25 May 2012 20:04:35 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #084702">
+<a href="#" class="map-link" alt="show taylorsalvat0re on the map">
+<font style="color:#084702; font-size:large">
+<span class="fn org">taylorsalvat0re</span>
+[Gastroenteritis]
+</font>
+</a>
+<div class="announcement">that bitch just gave birth ... Brb <span style="background-color:#999999">vomitting</span></div>
+<div class="timeStamp">Fri, 25 May 2012 04:58:49 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Pertussis" href="/diseases/2012-05-25/all/Pertussis">
+Pertussis [33]
+</a>
+<span id="Pertussis"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="28.444444444444443" x2="28.444444444444443" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/25 23:00:00</text><text x="28.444444444444443" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 28.444444444444443,70)">05/26</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">6</text></g><rect x="20" y="43" height="17" width="2" fill="#C600FE"></rect><rect x="146.66666666666666" y="43" height="17" width="2" fill="#C600FE"></rect><rect x="155.11111111111111" y="43" height="17" width="2" fill="#C600FE"></rect><rect x="172" y="27" height="33" width="2" fill="#C600FE"></rect><rect x="163.55555555555554" y="43" height="17" width="2" fill="#C600FE"></rect><rect x="172" y="43" height="17" width="2" fill="#C600FE"></rect><rect x="163.55555555555554" y="10" height="50" width="2" fill="#C600FE"></rect><rect x="155.11111111111111" y="43" height="17" width="2" fill="#C600FE"></rect><rect x="146.66666666666666" y="52" height="8" width="2" fill="#C600FE"></rect><rect x="172" y="27" height="33" width="2" fill="#C600FE"></rect><rect x="163.55555555555554" y="10" height="50" width="2" fill="#C600FE"></rect></svg></span>
+</div>
+<div id="Pertussis" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #C600FE">
+<a href="#" class="map-link" alt="show LarissaLeopard on the map">
+<font style="color:#C600FE; font-size:large">
+<span class="fn org">LarissaLeopard</span>
+[Pertussis]
+</font>
+</a>
+<div class="announcement">@alyssawunder <span style="background-color:#999999">Pertussis</span> test. My doc thinks I have/had a mild case of it. That shit was not fun. I'm pretty sure it touched my brain.</div>
+<div class="timeStamp">Fri, 25 May 2012 23:07:29 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #C600FE">
+<a href="#" class="map-link" alt="show LarissaLeopard on the map">
+<font style="color:#C600FE; font-size:large">
+<span class="fn org">LarissaLeopard</span>
+[Pertussis]
+</font>
+</a>
+<div class="announcement">@alyssawunder <span style="background-color:#999999">Pertussis</span> test. My doc thinks I have/had a mild case of it. That shit was not fun. I'm pretty sure it touched my brain.</div>
+<div class="timeStamp">Fri, 25 May 2012 23:07:29 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #C600FE">
+<a href="#" class="map-link" alt="show messengerflats on the map">
+<font style="color:#C600FE; font-size:large">
+<span class="fn org">messengerflats</span>
+[Pertussis]
+</font>
+</a>
+<div class="announcement">RT @CIDRAP: Wisconsin reports <span style="background-color:#999999">Pertussis</span> surge as US outbreaks continue http://t.co/En9FQntj</div>
+<div class="timeStamp">Sat, 26 May 2012 14:15:02 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #C600FE">
+<a href="#" class="map-link" alt="show thomasgetchius on the map">
+<font style="color:#C600FE; font-size:large">
+<span class="fn org">thomasgetchius</span>
+[Pertussis]
+</font>
+</a>
+<div class="announcement">@bwcarlson <span style="background-color:#999999">croup</span>...he's already on the mend and napping! :-)</div>
+<div class="timeStamp">Sat, 26 May 2012 15:30:09 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Common-Cold" href="/diseases/2012-05-25/all/Common Cold">
+Common Cold [29]
+</a>
+<span id="CommonCold"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="107.4" x2="107.4" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/25 01:00:00</text><text x="107.4" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 107.4,70)">05/26</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">8</text></g><rect x="92.2" y="47" height="13" width="2" fill="#1EFF09"></rect><rect x="92.2" y="47" height="13" width="2" fill="#1EFF09"></rect><rect x="35.2" y="47" height="13" width="2" fill="#1EFF09"></rect><rect x="20" y="35" height="25" width="2" fill="#1EFF09"></rect><rect x="172" y="54" height="6" width="2" fill="#1EFF09"></rect><rect x="164.4" y="47" height="13" width="2" fill="#1EFF09"></rect><rect x="168.20000000000002" y="47" height="13" width="2" fill="#1EFF09"></rect><rect x="168.20000000000002" y="10" height="50" width="2" fill="#1EFF09"></rect><rect x="160.6" y="47" height="13" width="2" fill="#1EFF09"></rect><rect x="153" y="47" height="13" width="2" fill="#1EFF09"></rect><rect x="107.4" y="47" height="13" width="2" fill="#1EFF09"></rect></svg></span>
+</div>
+<div id="CommonCold" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #1EFF09">
+<a href="#" class="map-link" alt="show Sosha_Lite on the map">
+<font style="color:#1EFF09; font-size:large">
+<span class="fn org">Sosha_Lite</span>
+[Common Cold]
+</font>
+</a>
+<div class="announcement">So my manager didn't know what <span style="background-color:#999999">pharyngitis</span> is.......well just know its contagious &amp; I'm not coming in.</div>
+<div class="timeStamp">Fri, 25 May 2012 20:15:03 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #1EFF09">
+<a href="#" class="map-link" alt="show riverand on the map">
+<font style="color:#1EFF09; font-size:large">
+<span class="fn org">riverand</span>
+[Common Cold]
+</font>
+</a>
+<div class="announcement">After a solid week of <span style="background-color:#999999">sinusitis</span> silence, some writing is happening today, ladies and gents!!</div>
+<div class="timeStamp">Fri, 25 May 2012 20:13:10 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #1EFF09">
+<a href="#" class="map-link" alt="show riverand on the map">
+<font style="color:#1EFF09; font-size:large">
+<span class="fn org">riverand</span>
+[Common Cold]
+</font>
+</a>
+<div class="announcement">This stupid disease takes A case of <span style="background-color:#999999">sinusitis</span> and turns it into HELL ON EARTH :( http://t.co/U3lBPV0s @GetGlue</div>
+<div class="timeStamp">Fri, 25 May 2012 05:48:57 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #1EFF09">
+<a href="#" class="map-link" alt="show davidgraves_ on the map">
+<font style="color:#1EFF09; font-size:large">
+<span class="fn org">davidgraves_</span>
+[Common Cold]
+</font>
+</a>
+<div class="announcement">Diagnosed with bacterial <span style="background-color:#999999">sinusitis</span>. Had to run in the pool for 3 miles. Steroid shot &amp; meds seemed to help. Thankful for common grace.</div>
+<div class="timeStamp">Fri, 25 May 2012 01:40:52 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Tetanus" href="/diseases/2012-05-25/all/Tetanus">
+Tetanus [27]
+</a>
+<span id="Tetanus"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="103.99999999999999" x2="103.99999999999999" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/25 03:00:00</text><text x="103.99999999999999" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 103.99999999999999,70)">05/26</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">4</text></g><rect x="56" y="35" height="25" width="2" fill="#706005"></rect><rect x="20" y="10" height="50" width="2" fill="#706005"></rect><rect x="72" y="35" height="25" width="2" fill="#706005"></rect><rect x="68" y="35" height="25" width="2" fill="#706005"></rect><rect x="64" y="35" height="25" width="2" fill="#706005"></rect><rect x="56" y="35" height="25" width="2" fill="#706005"></rect><rect x="172" y="47" height="13" width="2" fill="#706005"></rect><rect x="112" y="35" height="25" width="2" fill="#706005"></rect><rect x="172" y="35" height="25" width="2" fill="#706005"></rect><rect x="168" y="35" height="25" width="2" fill="#706005"></rect><rect x="152" y="35" height="25" width="2" fill="#706005"></rect><rect x="128" y="35" height="25" width="2" fill="#706005"></rect><rect x="108" y="35" height="25" width="2" fill="#706005"></rect></svg></span>
+</div>
+<div id="Tetanus" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #706005">
+<a href="#" class="map-link" alt="show bigeoppa on the map">
+<font style="color:#706005; font-size:large">
+<span class="fn org">bigeoppa</span>
+[Tetanus]
+</font>
+</a>
+<div class="announcement">Eddie "<span style="background-color:#999999">Lockjaw</span>" Davis and Johnny Griffin - Funky Flook http://t.co/DNopYF0f http://t.co/A92UuqFB</div>
+<div class="timeStamp">Fri, 25 May 2012 12:21:13 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #706005">
+<a href="#" class="map-link" alt="show MrAaronJones on the map">
+<font style="color:#706005; font-size:large">
+<span class="fn org">MrAaronJones</span>
+[Tetanus]
+</font>
+</a>
+<div class="announcement">...cause niggas talk shit 'til they get <span style="background-color:#999999">Lockjaw</span>.</div>
+<div class="timeStamp">Fri, 25 May 2012 03:48:36 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #706005">
+<a href="#" class="map-link" alt="show OGCashh1400 on the map">
+<font style="color:#706005; font-size:large">
+<span class="fn org">OGCashh1400</span>
+[Tetanus]
+</font>
+</a>
+<div class="announcement">Niggas Talk Shit Til ' They Get <span style="background-color:#999999">Lockjaw</span> . #Goldie - A$AP .</div>
+<div class="timeStamp">Fri, 25 May 2012 03:32:33 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #706005">
+<a href="#" class="map-link" alt="show RJStangl on the map">
+<font style="color:#706005; font-size:large">
+<span class="fn org">RJStangl</span>
+[Tetanus]
+</font>
+</a>
+<div class="announcement">@StatFreak101 We still going up north next weekend? If we r I gotta update my <span style="background-color:#999999">Tetanus</span> shot..... #abovehwy8problems</div>
+<div class="timeStamp">Fri, 25 May 2012 16:05:44 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Rabies" href="/diseases/2012-05-25/all/Rabies">
+Rabies [16]
+</a>
+<span id="Rabies"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/26 13:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">5</text></g><rect x="134" y="40" height="20" width="2" fill="#7A9868"></rect><rect x="96" y="40" height="20" width="2" fill="#7A9868"></rect><rect x="58" y="40" height="20" width="2" fill="#7A9868"></rect><rect x="20" y="40" height="20" width="2" fill="#7A9868"></rect><rect x="172" y="10" height="50" width="2" fill="#7A9868"></rect><rect x="134" y="40" height="20" width="2" fill="#7A9868"></rect><rect x="96" y="50" height="10" width="2" fill="#7A9868"></rect></svg></span>
+</div>
+<div id="Rabies" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #7A9868">
+<a href="#" class="map-link" alt="show joshjbradshaw on the map">
+<font style="color:#7A9868; font-size:large">
+<span class="fn org">joshjbradshaw</span>
+[Rabies]
+</font>
+</a>
+<div class="announcement">RT @joelquile: Hey I just met you And this is crazy But I think your dog Might have <span style="background-color:#999999">Rabies</span>.</div>
+<div class="timeStamp">Sat, 26 May 2012 16:30:13 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #7A9868">
+<a href="#" class="map-link" alt="show therealwardi on the map">
+<font style="color:#7A9868; font-size:large">
+<span class="fn org">therealwardi</span>
+[Rabies]
+</font>
+</a>
+<div class="announcement">Please be careful, bitches got the <span style="background-color:#999999">Rabies</span>.</div>
+<div class="timeStamp">Sat, 26 May 2012 15:41:31 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #7A9868">
+<a href="#" class="map-link" alt="show sassyy_ashleyy on the map">
+<font style="color:#7A9868; font-size:large">
+<span class="fn org">sassyy_ashleyy</span>
+[Rabies]
+</font>
+</a>
+<div class="announcement">My brother has <span style="background-color:#999999">Rabies</span> http://t.co/at3Mq1Pb #wtf</div>
+<div class="timeStamp">Sat, 26 May 2012 14:52:37 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #7A9868">
+<a href="#" class="map-link" alt="show joelquile on the map">
+<font style="color:#7A9868; font-size:large">
+<span class="fn org">joelquile</span>
+[Rabies]
+</font>
+</a>
+<div class="announcement">Hey I just met you And this is crazy But I think your dog Might have <span style="background-color:#999999">Rabies</span>.</div>
+<div class="timeStamp">Sat, 26 May 2012 13:49:55 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Tuberculosis" href="/diseases/2012-05-25/all/Tuberculosis">
+Tuberculosis [16]
+</a>
+<span id="Tuberculosis"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/26 15:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">8</text></g><rect x="172" y="10" height="50" width="2" fill="#F16E0C"></rect><rect x="172" y="54" height="6" width="2" fill="#F16E0C"></rect><rect x="96" y="47" height="13" width="2" fill="#F16E0C"></rect><rect x="20" y="47" height="13" width="2" fill="#F16E0C"></rect><rect x="96" y="41" height="19" width="2" fill="#F16E0C"></rect></svg></span>
+</div>
+<div id="Tuberculosis" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #F16E0C">
+<a href="#" class="map-link" alt="show Darmafall on the map">
+<font style="color:#F16E0C; font-size:large">
+<span class="fn org">Darmafall</span>
+[Tuberculosis]
+</font>
+</a>
+<div class="announcement">@_BahamaMamaa @<span style="background-color:#999999">TB</span>_rare1 Those were the good ole days. And I still somehow managed to pull off an A in that class.</div>
+<div class="timeStamp">Sat, 26 May 2012 17:42:16 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #F16E0C">
+<a href="#" class="map-link" alt="show simply_arianna on the map">
+<font style="color:#F16E0C; font-size:large">
+<span class="fn org">simply_arianna</span>
+[Tuberculosis]
+</font>
+</a>
+<div class="announcement">@BeautyMonsterr girl no the other <span style="background-color:#999999">TB</span></div>
+<div class="timeStamp">Sat, 26 May 2012 17:39:29 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #F16E0C">
+<a href="#" class="map-link" alt="show LiamPayneSwift on the map">
+<font style="color:#F16E0C; font-size:large">
+<span class="fn org">LiamPayneSwift</span>
+[Tuberculosis]
+</font>
+</a>
+<div class="announcement">RT @BOPandTigerBeat: Has anyone bought the 1D tour book for this tour? If yes, did you see that BOP &amp; <span style="background-color:#999999">TB</span> are the only mags in the book? So cool. We heart 1D. :)</div>
+<div class="timeStamp">Sat, 26 May 2012 17:32:42 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #F16E0C">
+<a href="#" class="map-link" alt="show TB_Batgang on the map">
+<font style="color:#F16E0C; font-size:large">
+<span class="fn org"><span style="background-color:#999999">TB</span>_Batgang</span>
+[Tuberculosis]
+</font>
+</a>
+<div class="announcement">It's up posed to be 90 by 3 o'clock. Wtf is it so hot already? #Summer2012</div>
+<div class="timeStamp">Sat, 26 May 2012 17:31:02 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Influenza" href="/diseases/2012-05-25/all/Influenza">
+Influenza [13]
+</a>
+<span id="Influenza"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/26 01:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">5</text></g><rect x="162.5" y="10" height="50" width="2" fill="#7068FE"></rect><rect x="143.5" y="40" height="20" width="2" fill="#7068FE"></rect><rect x="58" y="40" height="20" width="2" fill="#7068FE"></rect><rect x="20" y="40" height="20" width="2" fill="#7068FE"></rect><rect x="172" y="40" height="20" width="2" fill="#7068FE"></rect></svg></span>
+</div>
+<div id="Influenza" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #7068FE">
+<a href="#" class="map-link" alt="show ethank on the map">
+<font style="color:#7068FE; font-size:large">
+<span class="fn org">ethank</span>
+[Influenza]
+</font>
+</a>
+<div class="announcement">Unseasonably cool weather out and I have the <span style="background-color:#999999">Flu</span> or something so can't go run.</div>
+<div class="timeStamp">Sat, 26 May 2012 16:50:02 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #7068FE">
+<a href="#" class="map-link" alt="show patentesquire on the map">
+<font style="color:#7068FE; font-size:large">
+<span class="fn org">patentesquire</span>
+[Influenza]
+</font>
+</a>
+<div class="announcement">World Health Assembly: Member States Call For Acceleration On Pandemic <span style="background-color:#999999">Flu</span> Preparedness: One year since the adop... http://t.co/5FUn34ai</div>
+<div class="timeStamp">Sat, 26 May 2012 16:08:25 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #7068FE">
+<a href="#" class="map-link" alt="show goT_daGRiND_FLu on the map">
+<font style="color:#7068FE; font-size:large">
+<span class="fn org">goT_daGRiND_<span style="background-color:#999999">Flu</span></span>
+[Influenza]
+</font>
+</a>
+<div class="announcement">RT @N_DMONEY_iTrust: #MemorialWeekend down in Miami aint the same no more.... There was a SWAT team on every street.</div>
+<div class="timeStamp">Sat, 26 May 2012 16:07:22 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #7068FE">
+<a href="#" class="map-link" alt="show galenleeds on the map">
+<font style="color:#7068FE; font-size:large">
+<span class="fn org">galenleeds</span>
+[Influenza]
+</font>
+</a>
+<div class="announcement">I see contests for free trips &amp; stays in Vegas, &amp; wonder if there're also contests for equally enjoyable things... like getting the <span style="background-color:#999999">Flu</span></div>
+<div class="timeStamp">Sat, 26 May 2012 16:03:24 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Pneumonia" href="/diseases/2012-05-25/all/Pneumonia">
+Pneumonia [8]
+</a>
+<span id="Pneumonia"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="111.2" x2="111.2" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/25</text><text x="111.2" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 111.2,70)">05/26</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">4</text></g><rect x="20" y="35" height="25" width="2" fill="#670656"></rect><rect x="130.2" y="10" height="50" width="2" fill="#670656"></rect><rect x="172" y="35" height="25" width="2" fill="#670656"></rect></svg></span>
+</div>
+<div id="Pneumonia" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #670656">
+<a href="#" class="map-link" alt="show _RUDeMEISTER_ on the map">
+<font style="color:#670656; font-size:large">
+<span class="fn org">_RUDeMEISTER_</span>
+[Pneumonia]
+</font>
+</a>
+<div class="announcement">#fact lol RT @jake_capo: 😂😂😂  RT @MAL___: I'm really out here breaking all kinds of man law with this umbrella. Real niggaz catch <span style="background-color:#999999">pneum</span></div>
+<div class="timeStamp">Fri, 25 May 2012 00:49:59 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #670656">
+<a href="#" class="map-link" alt="show _RUDeMEISTER_ on the map">
+<font style="color:#670656; font-size:large">
+<span class="fn org">_RUDeMEISTER_</span>
+[Pneumonia]
+</font>
+</a>
+<div class="announcement">#fact lol RT @jake_capo: 😂😂😂  RT @MAL___: I'm really out here breaking all kinds of man law with this umbrella. Real niggaz catch <span style="background-color:#999999">pneum</span></div>
+<div class="timeStamp">Fri, 25 May 2012 00:49:59 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #670656">
+<a href="#" class="map-link" alt="show MWied94Jacked on the map">
+<font style="color:#670656; font-size:large">
+<span class="fn org">MWied94Jacked</span>
+[Pneumonia]
+</font>
+</a>
+<div class="announcement">Being broke sucks lol fuck <span style="background-color:#999999">Pneumonia</span> and I have a suspension coming up! #need a new job</div>
+<div class="timeStamp">Sat, 26 May 2012 05:45:39 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #670656">
+<a href="#" class="map-link" alt="show _Quepid on the map">
+<font style="color:#670656; font-size:large">
+<span class="fn org">_Quepid</span>
+[Pneumonia]
+</font>
+</a>
+<div class="announcement">Watch &amp; chain got <span style="background-color:#999999">Pneumonia</span></div>
+<div class="timeStamp">Sat, 26 May 2012 05:35:41 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Typhoid" href="/diseases/2012-05-25/all/Typhoid">
+Typhoid [8]
+</a>
+<span id="Typhoid"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/25 01:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">2</text></g><rect x="172" y="10" height="50" width="2" fill="#0FA6C5"></rect><rect x="130.54545454545456" y="10" height="50" width="2" fill="#0FA6C5"></rect><rect x="75.27272727272728" y="10" height="50" width="2" fill="#0FA6C5"></rect><rect x="20" y="10" height="50" width="2" fill="#0FA6C5"></rect></svg></span>
+</div>
+<div id="Typhoid" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #0FA6C5">
+<a href="#" class="map-link" alt="show Ms_OrEjOkO on the map">
+<font style="color:#0FA6C5; font-size:large">
+<span class="fn org">Ms_OrEjOkO</span>
+[Typhoid]
+</font>
+</a>
+<div class="announcement">Zegzual 1 ;) RT @iLeakMyThought: <span style="background-color:#999999">Typhoid</span> or yellow? "@Ms_OrEjOkO: U give me fever"</div>
+<div class="timeStamp">Fri, 25 May 2012 23:30:12 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #0FA6C5">
+<a href="#" class="map-link" alt="show lancexenos on the map">
+<font style="color:#0FA6C5; font-size:large">
+<span class="fn org">lancexenos</span>
+[Typhoid]
+</font>
+</a>
+<div class="announcement">@CharlieRiley819 @Woe_and_Isme just saw a post from one of the EG people - also went home sick from the con - have to start <span style="background-color:#999999">Typhoid</span> Robert</div>
+<div class="timeStamp">Fri, 25 May 2012 17:07:59 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #0FA6C5">
+<a href="#" class="map-link" alt="show brittanyrberry on the map">
+<font style="color:#0FA6C5; font-size:large">
+<span class="fn org">brittanyrberry</span>
+[Typhoid]
+</font>
+</a>
+<div class="announcement">It's a weird feeling to know you're consciously swallowing a capsule containing the live <span style="background-color:#999999">Typhoid</span> virus #vaccinations #goingtoChina</div>
+<div class="timeStamp">Fri, 25 May 2012 09:22:48 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #0FA6C5">
+<a href="#" class="map-link" alt="show Cekent on the map">
+<font style="color:#0FA6C5; font-size:large">
+<span class="fn org">Cekent</span>
+[Typhoid]
+</font>
+</a>
+<div class="announcement">@justinpickard <span style="background-color:#999999">Typhoid</span> shot? I had no idea North Carolina was so malodorous. Cc: @Changeist</div>
+<div class="timeStamp">Fri, 25 May 2012 01:37:12 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Mosquito-Borne-Disease" href="/diseases/2012-05-25/all/Mosquito Borne Disease">
+Mosquito Borne Disease [6]
+</a>
+<span id="MosquitoBorneDisease"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/26 15:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">3</text></g><rect x="20" y="43" height="17" width="2" fill="#85CE3F"></rect><rect x="96" y="10" height="50" width="2" fill="#85CE3F"></rect><rect x="172" y="27" height="33" width="2" fill="#85CE3F"></rect></svg></span>
+</div>
+<div id="MosquitoBorneDisease" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #85CE3F">
+<a href="#" class="map-link" alt="show tcaSTEALYAGIRL on the map">
+<font style="color:#85CE3F; font-size:large">
+<span class="fn org">tcaSTEALYAGIRL</span>
+[Mosquito Borne Disease]
+</font>
+</a>
+<div class="announcement">Starting early. <span style="background-color:#999999">EEE</span> yewwwww</div>
+<div class="timeStamp">Sat, 26 May 2012 15:38:43 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #85CE3F">
+<a href="#" class="map-link" alt="show OmoTohBossy on the map">
+<font style="color:#85CE3F; font-size:large">
+<span class="fn org">OmoTohBossy</span>
+[Mosquito Borne Disease]
+</font>
+</a>
+<div class="announcement">@freshest911 I dun have money:( shey u <span style="background-color:#999999">WEE</span> send me money?:-(</div>
+<div class="timeStamp">Sat, 26 May 2012 16:43:35 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #85CE3F">
+<a href="#" class="map-link" alt="show ctt1wbw on the map">
+<font style="color:#85CE3F; font-size:large">
+<span class="fn org">ctt1wbw</span>
+[Mosquito Borne Disease]
+</font>
+</a>
+<div class="announcement">There's a tropical storm off the coast. A <span style="background-color:#999999">WEE</span> bit windy today. Got a kite? Good!! (via @weathermobapp) http://t.co/5AJH3z7b</div>
+<div class="timeStamp">Sat, 26 May 2012 16:39:20 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #85CE3F">
+<a href="#" class="map-link" alt="show vaughanweather on the map">
+<font style="color:#85CE3F; font-size:large">
+<span class="fn org">vaughanweather</span>
+[Mosquito Borne Disease]
+</font>
+</a>
+<div class="announcement">@StratfordWXCntr @StratfordWXCntr absolutely, your just a <span style="background-color:#999999">WEE</span> bit more optimistic hahaha - I have not looked at the latest NAM/GEM</div>
+<div class="timeStamp">Sat, 26 May 2012 16:39:05 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Malaria" href="/diseases/2012-05-25/all/Malaria">
+Malaria [6]
+</a>
+<span id="Malaria"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/26 05:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">2</text></g><rect x="172" y="10" height="50" width="2" fill="#1EFFB4"></rect><rect x="36.888888888888886" y="10" height="50" width="2" fill="#1EFFB4"></rect><rect x="20" y="10" height="50" width="2" fill="#1EFFB4"></rect></svg></span>
+</div>
+<div id="Malaria" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #1EFFB4">
+<a href="#" class="map-link" alt="show iRepRoger on the map">
+<font style="color:#1EFFB4; font-size:large">
+<span class="fn org">iRepRoger</span>
+[Malaria]
+</font>
+</a>
+<div class="announcement">I have <span style="background-color:#999999">Malaria</span></div>
+<div class="timeStamp">Sat, 26 May 2012 14:46:33 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #1EFFB4">
+<a href="#" class="map-link" alt="show Karlitoz22 on the map">
+<font style="color:#1EFFB4; font-size:large">
+<span class="fn org">Karlitoz22</span>
+[Malaria]
+</font>
+</a>
+<div class="announcement">fun trip so far:) loving every moment with @susetRachel @manny_<span style="background-color:#999999">Malaria</span> , and now enjoying the night with some hooka:) http://t.co/xMlMqtaJ</div>
+<div class="timeStamp">Sat, 26 May 2012 06:38:49 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #1EFFB4">
+<a href="#" class="map-link" alt="show manny_malaria on the map">
+<font style="color:#1EFFB4; font-size:large">
+<span class="fn org">manny_<span style="background-color:#999999">Malaria</span></span>
+[Malaria]
+</font>
+</a>
+<div class="announcement">tonight I'm gonna come alive  @ San Antonio, TX http://t.co/RvEls5rn</div>
+<div class="timeStamp">Sat, 26 May 2012 05:26:35 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #1EFFB4">
+<a href="#" class="map-link" alt="show iRepRoger on the map">
+<font style="color:#1EFFB4; font-size:large">
+<span class="fn org">iRepRoger</span>
+[Malaria]
+</font>
+</a>
+<div class="announcement">I have <span style="background-color:#999999">Malaria</span></div>
+<div class="timeStamp">Sat, 26 May 2012 14:46:33 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Tick-Borne-Disease" href="/diseases/2012-05-25/all/Tick Borne Disease">
+Tick Borne Disease [4]
+</a>
+<span id="TickBorneDisease"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/25 19:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">2</text></g><rect x="20" y="10" height="50" width="2" fill="#5E4C68"></rect><rect x="20" y="10" height="50" width="2" fill="#5E4C68"></rect></svg></span>
+</div>
+<div id="TickBorneDisease" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #5E4C68">
+<a href="#" class="map-link" alt="show OWStarr on the map">
+<font style="color:#5E4C68; font-size:large">
+<span class="fn org">OWStarr</span>
+[Tick Borne Disease]
+</font>
+</a>
+<div class="announcement">@scifri and #lyme isn't the only tick borne problem. C also #<span style="background-color:#999999">Anaplasmosis</span> and #ehrlichiosis (threats to you and ur pets)</div>
+<div class="timeStamp">Fri, 25 May 2012 19:39:07 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #5E4C68">
+<a href="#" class="map-link" alt="show OWStarr on the map">
+<font style="color:#5E4C68; font-size:large">
+<span class="fn org">OWStarr</span>
+[Tick Borne Disease]
+</font>
+</a>
+<div class="announcement">@scifri and #lyme isn't the only tick borne problem. C also #anaplasmosis and #<span style="background-color:#999999">ehrlichiosis</span> (threats to you and ur pets)</div>
+<div class="timeStamp">Fri, 25 May 2012 19:39:07 +0000</div>
+</div>
+</div></div><div id="2"><div class="container">
+<div class="snippet" style="border: solid 1px #5E4C68">
+<a href="#" class="map-link" alt="show OWStarr on the map">
+<font style="color:#5E4C68; font-size:large">
+<span class="fn org">OWStarr</span>
+[Tick Borne Disease]
+</font>
+</a>
+<div class="announcement">@scifri and #lyme isn't the only tick borne problem. C also #<span style="background-color:#999999">Anaplasmosis</span> and #ehrlichiosis (threats to you and ur pets)</div>
+<div class="timeStamp">Fri, 25 May 2012 19:39:07 +0000</div>
+</div>
+</div></div><div id="3"><div class="container">
+<div class="snippet" style="border: solid 1px #5E4C68">
+<a href="#" class="map-link" alt="show OWStarr on the map">
+<font style="color:#5E4C68; font-size:large">
+<span class="fn org">OWStarr</span>
+[Tick Borne Disease]
+</font>
+</a>
+<div class="announcement">@scifri and #lyme isn't the only tick borne problem. C also #anaplasmosis and #<span style="background-color:#999999">ehrlichiosis</span> (threats to you and ur pets)</div>
+<div class="timeStamp">Fri, 25 May 2012 19:39:07 +0000</div>
+</div>
+</div></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Mumps" href="/diseases/2012-05-25/all/Mumps">
+Mumps [2]
+</a>
+<span id="Mumps"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/26 02:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">2</text></g><rect x="20" y="10" height="50" width="2" fill="#F287D2"></rect></svg></span>
+</div>
+<div id="Mumps" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #F287D2">
+<a href="#" class="map-link" alt="show UTjobs on the map">
+<font style="color:#F287D2; font-size:large">
+<span class="fn org">UTjobs</span>
+[Mumps]
+</font>
+</a>
+<div class="announcement">Sr Applications Architect - <span style="background-color:#999999">Mumps</span>/Cache, Ensemble Job - Coventry Health Care - Salt Lake City, UT http://t.co/fPXXbI7w #jobcircle</div>
+<div class="timeStamp">Sat, 26 May 2012 02:23:45 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #F287D2">
+<a href="#" class="map-link" alt="show UTjobs on the map">
+<font style="color:#F287D2; font-size:large">
+<span class="fn org">UTjobs</span>
+[Mumps]
+</font>
+</a>
+<div class="announcement">Sr Applications Architect - <span style="background-color:#999999">Mumps</span>/Cache, Ensemble Job - Coventry Health Care - Salt Lake City, UT http://t.co/fPXXbI7w #jobcircle</div>
+<div class="timeStamp">Sat, 26 May 2012 02:23:45 +0000</div>
+</div>
+</div></div><div id="2"></div><div id="3"></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Dengue" href="/diseases/2012-05-25/all/Dengue">
+Dengue [2]
+</a>
+<span id="Dengue"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/25 23:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">2</text></g><rect x="20" y="10" height="50" width="2" fill="#FC00A9"></rect></svg></span>
+</div>
+<div id="Dengue" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #FC00A9">
+<a href="#" class="map-link" alt="show Ms_OrEjOkO on the map">
+<font style="color:#FC00A9; font-size:large">
+<span class="fn org">Ms_OrEjOkO</span>
+[Dengue]
+</font>
+</a>
+<div class="announcement">Ehn ds 1 has copied and pasted her entomology RT @Mizz_Phlexy: Ela u r mad!!! Tis <span style="background-color:#999999">Dengue</span>  "@iLeakMyThought: ... http://t.co/gL9CK7Hw</div>
+<div class="timeStamp">Fri, 25 May 2012 23:33:46 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #FC00A9">
+<a href="#" class="map-link" alt="show Ms_OrEjOkO on the map">
+<font style="color:#FC00A9; font-size:large">
+<span class="fn org">Ms_OrEjOkO</span>
+[Dengue]
+</font>
+</a>
+<div class="announcement">Ehn ds 1 has copied and pasted her entomology RT @Mizz_Phlexy: Ela u r mad!!! Tis <span style="background-color:#999999">Dengue</span>  "@iLeakMyThought: ... http://t.co/gL9CK7Hw</div>
+<div class="timeStamp">Fri, 25 May 2012 23:33:46 +0000</div>
+</div>
+</div></div><div id="2"></div><div id="3"></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Polio" href="/diseases/2012-05-25/all/Polio">
+Polio [2]
+</a>
+<span id="Polio"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/26 15:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">2</text></g><rect x="20" y="10" height="50" width="2" fill="#F1004E"></rect></svg></span>
+</div>
+<div id="Polio" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #F1004E">
+<a href="#" class="map-link" alt="show Tom_Durt on the map">
+<font style="color:#F1004E; font-size:large">
+<span class="fn org">Tom_Durt</span>
+[Polio]
+</font>
+</a>
+<div class="announcement">Bill Gates, the most generous person on the planet (he's given away $28 Billion already), has helped ­eradicate <span style="background-color:#999999">Polio</span> in India.</div>
+<div class="timeStamp">Sat, 26 May 2012 15:16:24 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #F1004E">
+<a href="#" class="map-link" alt="show Tom_Durt on the map">
+<font style="color:#F1004E; font-size:large">
+<span class="fn org">Tom_Durt</span>
+[Polio]
+</font>
+</a>
+<div class="announcement">Bill Gates, the most generous person on the planet (he's given away $28 Billion already), has helped ­eradicate <span style="background-color:#999999">Polio</span> in India.</div>
+<div class="timeStamp">Sat, 26 May 2012 15:16:24 +0000</div>
+</div>
+</div></div><div id="2"></div><div id="3"></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Varicella" href="/diseases/2012-05-25/all/Varicella">
+Varicella [2]
+</a>
+<span id="Varicella"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/25 17:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">2</text></g><rect x="20" y="10" height="50" width="2" fill="#0949FE"></rect></svg></span>
+</div>
+<div id="Varicella" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #0949FE">
+<a href="#" class="map-link" alt="show EyE_IntEr_TainE on the map">
+<font style="color:#0949FE; font-size:large">
+<span class="fn org">EyE_IntEr_TainE</span>
+[Varicella]
+</font>
+</a>
+<div class="announcement"><span style="background-color:#999999">chickenpox</span>???????????</div>
+<div class="timeStamp">Fri, 25 May 2012 17:16:15 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #0949FE">
+<a href="#" class="map-link" alt="show EyE_IntEr_TainE on the map">
+<font style="color:#0949FE; font-size:large">
+<span class="fn org">EyE_IntEr_TainE</span>
+[Varicella]
+</font>
+</a>
+<div class="announcement"><span style="background-color:#999999">chickenpox</span>???????????</div>
+<div class="timeStamp">Fri, 25 May 2012 17:16:15 +0000</div>
+</div>
+</div></div><div id="2"></div><div id="3"></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Meningitis" href="/diseases/2012-05-25/all/Meningitis">
+Meningitis [2]
+</a>
+<span id="Meningitis"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/25 19:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">2</text></g><rect x="20" y="10" height="50" width="2" fill="#000067"></rect></svg></span>
+</div>
+<div id="Meningitis" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #000067">
+<a href="#" class="map-link" alt="show TiffyishSpiffy on the map">
+<font style="color:#000067; font-size:large">
+<span class="fn org">TiffyishSpiffy</span>
+[Meningitis]
+</font>
+</a>
+<div class="announcement">Just got my <span style="background-color:#999999">Meningitis</span> shot. Ow. #readyforcollege</div>
+<div class="timeStamp">Fri, 25 May 2012 19:23:36 +0000</div>
+</div>
+</div></div><div id="1"><div class="container">
+<div class="snippet" style="border: solid 1px #000067">
+<a href="#" class="map-link" alt="show TiffyishSpiffy on the map">
+<font style="color:#000067; font-size:large">
+<span class="fn org">TiffyishSpiffy</span>
+[Meningitis]
+</font>
+</a>
+<div class="announcement">Just got my <span style="background-color:#999999">Meningitis</span> shot. Ow. #readyforcollege</div>
+<div class="timeStamp">Fri, 25 May 2012 19:23:36 +0000</div>
+</div>
+</div></div><div id="2"></div><div id="3"></div>
+</div>
+</li>
+<li>
+<div class="histogram">
+<a class="Anthrax" href="/diseases/2012-05-25/all/Anthrax">
+Anthrax [1]
+</a>
+<span id="Anthrax"><svg width="192" height="135"><g><line x1="20" x2="20" y1="60" y2="64" stroke="white"></line><line x1="16" x2="20" y1="10" y2="10" stroke="white"></line><line x1="20" x2="172" y1="10" y2="10" stroke="#999999"></line><text x="20" y="70" text-anchor="start" style="fill:white; font-size:9px" transform="rotate(45 20,70)">05/26 03:00:00</text><text x="10" y="10" text-anchor="end" style="fill:white; font-size:9px">1</text></g><rect x="20" y="10" height="50" width="2" fill="#0000FE"></rect></svg></span>
+</div>
+<div id="Anthrax" class="snippets">
+<div id="0"><div class="container">
+<div class="snippet" style="border: solid 1px #0000FE">
+<a href="#" class="map-link" alt="show mrdebonair2u on the map">
+<font style="color:#0000FE; font-size:large">
+<span class="fn org">mrdebonair2u</span>
+[Anthrax]
+</font>
+</a>
+<div class="announcement">"@Mz_Amour: So niggas gotta go in her shit with the <span style="background-color:#999999">anthrax</span> mask 😷 #thestruggle"#OutBreakBox</div>
+<div class="timeStamp">Sat, 26 May 2012 03:58:31 +0000</div>
+</div>
+</div></div><div id="1"></div><div id="2"></div><div id="3"></div>
+</div>
+</li>
+</ul>
+<div id="footer"><ul><li>© 2012 Adam Sadilek &amp; Andrew Abumoussa</li></ul></div><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22485363-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><div id="loginForm" style="display:none"><form action="/login" method="post">
+<input placeholder="username" type="text" name="name"><br>
+<font style="padding:0 5px; color:red; font-size:small">check which diseases are following you :</font>
+<div class="clearfix">
+<button id="doLogin" class="btn large" type="submit">login</button>
+</div>
+</form></div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script><script type="text/javascript">
+function getColorByDisease(disease){
+	if(disease=="Anthrax")
+		  return "#0000FE";
+	else if(disease=="Cholera")
+		  return "#FC0008";
+	else if(disease=="Common Cold")
+		  return "#1EFF09";
+	else if(disease=="Dengue")
+		  return "#FC00A9";
+	else if(disease=="Diphtheria")
+		  return "#FECC0B";
+	else if(disease=="Gastroenteritis")
+		  return "#084702";
+	else if(disease=="Influenza")
+		  return "#7068FE";
+	else if(disease=="Legionnaires' Disease")
+		  return "#8B3C35";
+	else if(disease=="Malaria")
+		  return "#1EFFB4";
+	else if(disease=="Measles")
+		  return "#0D7083";
+	else if(disease=="Meningitis")
+		  return "#000067";
+	else if(disease=="Mosquito Borne Disease")
+		  return "#85CE3F";
+	else if(disease=="Mumps")
+		  return "#F287D2";
+	else if(disease=="Pertussis")
+		  return "#C600FE";
+	else if(disease=="Pneumonia")
+		  return "#670656";
+	else if(disease=="Polio")
+		  return "#F1004E";
+	else if(disease=="STD")
+		  return "#FEB470";
+	else if(disease=="Rabies")
+		  return "#7A9868";
+	else if(disease=="Tuberculosis")
+		  return "#F16E0C";
+    else if(disease=="Tetanus")
+          return "#706005";
+    else if(disease=="Typhoid")
+          return "#0FA6C5";
+    else if(disease=="Smallpox")
+          return "#8DB1FF";
+    else if(disease=="Tick Borne Disease")
+          return "#5E4C68";
+    else if(disease=="Varicella")
+          return "#0949FE";
+	else
+		  return "#999900";
+}
+</script><script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=true"></script><script src="http://maps.gstatic.com/intl/en_us/mapfiles/api-3/7/17/main.js" type="text/javascript"></script><script type="text/javascript" src="/resources/scripts/jquery.min.js"></script><script type="text/javascript" src="/resources/scripts/map.js"></script><script type="text/javascript" src="/resources/scripts/jquery.ui.js"></script><script type="text/javascript" src="/resources/scripts/jquery.ui.custom.js"></script><script type="text/javascript" src="/resources/scripts/custom_pin.js"></script><script type="text/javascript" src="/resources/scripts/initialize.js"></script><script type="text/javascript" src="/resources/scripts/pin_slider.js"></script><script type="text/javascript" src="/resources/scripts/pollutants.js"></script><script type="text/javascript" src="/resources/scripts/tutorial.js"></script><script type="text/javascript" src="/resources/scripts/about.js"></script><script type="text/javascript" src="/resources/scripts/swap.js"></script><script type="text/javascript" src="/resources/scripts/city_select.js"></script><script type="text/javascript" src="/resources/scripts/geoxml3.js"></script><script type="text/javascript" src="/resources/scripts/ProjectedOverlay.js"></script><script type="text/javascript">var map = null;
+var twitterHealthPins = {};
+var twitterInfoWindows = {};
+var activeInfoWindow = null;
+var allControls = {};
+var dataUrl = null;
+var initialized = false;
+//var pageLink = '';
+//var pageMode = '';
+
+var monthMap = {
+	'Jan': 'January',
+	'Feb': 'February',
+	'Mar': 'March',
+	'Apr': 'April',
+	'May': 'May',
+	'Jun': 'June',
+	'Jul': 'July',
+	'Aug': 'August',
+	'Sep': 'September',
+	'Oct': 'October',
+	'Nov': 'November',
+	'Dec': 'December'
+};
+
+var tableMap = {
+    diseases: 'diseases'
+};
+
+var changePolls = {};
+var allTweets = {};
+var daysWithTweets = {
+    diseases: []
+}
+
+$(document).ready(function() {
+	// create map
+	map = new google.maps.Map(document.getElementById("map_canvas"), {
+		center: new google.maps.LatLng(0.0, 0.0),
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		zoom: 1,
+        scrollwheel : true,
+        draggable : true,
+        navigationControl : false,
+        mapTypeControl : false,
+        scaleControl : false,
+        disableDoubleClickZoom : false,
+		styles:  [ 
+					{
+		    stylers: [
+		      { invert_lightness: true },
+		      { saturation: -56 },
+		      { lightness: -56 },
+		      { visibility: "simplified" }
+		    ]
+		  },{
+		    featureType: "road",
+		    stylers: [
+		      { visibility: "simplified" },
+		      { lightness: -34 },
+		      { saturation: -44 },
+		      { hue: "#00f6ff" }
+		    ]
+		  },{
+		    featureType: "road",
+		    elementType: "labels",
+		    stylers: [
+		      { visibility: "off" }
+		    ]
+		  },{
+		    featureType: "water",
+		    stylers: [
+		      { hue: "#0066ff" },
+		      { invert_lightness: true },
+		      { saturation: -68 },
+		      { lightness: -71 }
+		    ]
+		  }
+ 		],
+ 		zoomControlOptions: {
+			style: google.maps.ZoomControlStyle.SMALL
+		},
+		draggableCursor: 'default'
+	});
+	
+	map.fitBounds(getBoundsUS());
+		
+	google.maps.event.addListenerOnce(map, 'tilesloaded', function(event) {
+	    load("diseases");
+	});
+	
+	
+	//Replace the data only if map hasn't changed for 1.5s
+	google.maps.event.addListener(map, 'idle', function() {
+		var bounds1 = map.getBounds();
+    	window.setTimeout(function() {
+			if(bounds1 == map.getBounds() && initialized){
+			
+				// --- clear the old pins
+			    $.each(allTweets.diseases, function(i, tweet) {
+			        tweet.pin.setMap(null);
+			    });
+			    allTweets.diseases = {};
+			    
+				// --- Retrieve the new ones.
+			  	load("diseases", bounds1);
+			}else {
+			    initialized = true;
+			}
+    	}, 1500);
+  	});
+	
+	
+	
+});
+
+function getColorForRating(rating) {
+	if(rating < .82){
+		return "#BBFF33";
+	}else if(rating < .84){
+		return "#ccFF66";
+	}else if(rating < .86){
+		return "#DDFF99";
+	}else if(rating < .88){
+		return "#EEFFCC";
+	}else if(rating < .90){
+		return "#FFFFCC";
+	}else if(rating < .92){
+		return "#FFFF99";
+	}else if(rating < .94){
+		return "#FFFF66";
+	}else if(rating < .96){
+		return "#FFFF33";
+	}else if(rating < .98){
+		return "#FFFF00";
+	}else if(rating < 1){
+		return "#FFEECC";
+	}else if(rating < 1.02){
+		return "#FFDD99";
+	}else if(rating < 1.04){
+		return "#FFCC66";
+	}else if(rating < 1.06){
+		return "#FFBB33";
+	}else if(rating < 1.08){
+		return "#FFAA00";
+	}else if(rating < 1.1){
+		return "#FF7733";
+	}else if(rating < 1.12){
+		return "#D94426";
+	}else if(rating < 1.14){
+		return "#E63b19";
+	}else if(rating < 1.16){
+		return "#f2330d";
+	}else{
+		return "#ff0000";
+	}
+}
+
+// loads tweets by day for a more responsive site appearance
+function load(name, bounds) {
+    var dataUrl = getUrl(true, bounds);
+    $.getJSON(dataUrl, function(data) {
+        // reduce new dataset and draw new page bottom
+        var dataCount = reduceForCount(data.tweets);
+        processCounts(dataCount);
+        
+        // reduce new dataset and draw fresh histograms
+     	dataHist = reduceForHistograms(data.tweets);
+     	processHistograms(dataHist);
+     	
+     	// iterate over this day
+        var snip = {};
+        $.each(data.tweets, function(i, tweet) {
+            addTweet(tweet, name, map);
+            // add snippets
+            var disease = tweet.taxonomy.disease.replace(/[^A-Za-z]/g, '');
+            if(!snip[disease])
+                snip[disease] = 0;
+            
+            if(snip[disease] < 4) {
+                var snippet = makeInfoWindow(tweet);
+                $("div#" + disease).children("#" + snip[disease]).empty();
+                $("div#" + disease).children("#" + snip[disease]).append(snippet);
+                snip[disease]++;
+            }
+        });
+        // add polling handlers first time around
+        /*if(i == 0) {
+            changePolls[name] = setTimeout(function() {
+                longpoll(name, data.updateSequence);
+            }, 60000);
+        }*/
+    });
+}
+
+// longpoll handlers: check for changes
+// props to koleto of stackoverflow
+function longpoll(name, since) {
+    $.getJSON('/changes/' + name + '?since=' + since, function(changes) {
+        // logging for sanity purposes
+        log.info("Polling " + name + " API for changes...");
+        log.info("Changes: ");
+        // add changes
+        $.each(changes.tweets, function(i, tweet) {
+            log.info("" + i + ", " + tweet._id);
+           addTweet(tweet, name, map);
+        });
+	    // restart poll timer
+	    changePolls[name] = setTimeout(function() {
+            longpoll(name, changes.updateSequence);
+        }, 60000);
+    });
+}
+
+function getUrl(isDataUrl, bounds, disease) {
+    var url = isDataUrl ? "/data/diseases" : "/diseases";
+    bounds = bounds != null ? bounds : getBoundsUS();
+    var n = bounds.getNorthEast().lat(), e = bounds.getNorthEast().lng();
+    var s = bounds.getSouthWest().lat(), w = bounds.getSouthWest().lng();
+    url += (isDataUrl ? ("/" + s + "/" + w + "/" + n + "/" + e) : "");
+    url += ("Fri May 25 00:00:00 EDT 2012" != "" ? "/" + getDateString("Fri May 25 00:00:00 EDT 2012") : "/" + getDateString(new Date().toDateString()));
+    url += ("" != "" ? "/" : (!!disease ? "/all" : ""));
+    url += (!!disease ? "/" + disease : ("" != "" ? "/" : ""));
+    url += ("" != "" ? "/" : "");
+    
+    return url;
+}
+
+function getDateString(day) {
+    var d = new Date(day);
+    var mo = d.getMonth() < 9 ? "0" + (d.getMonth() + 1) : "" + (d.getMonth() + 1);
+    var date = d.getDate() < 10 ? "0" + d.getDate() : "" + d.getDate();
+    var dayUnderscores = d.getFullYear() + "-" + mo + "-" + date;
+    return dayUnderscores;
+}
+</script><script src="http://d3js.org/d3.v2.js"></script>
+
+<style>
+	.chart rect {
+		stroke: white;
+		fill: steelblue;
+	}
+</style>
+
+<script type="text/javascript">
+/*d3.json("/resources/scripts/diseases.json", function(dataJSON) {
+    processHistograms(dataJSON);
+});*/
+
+function reduceForCount(tweets) {
+    var sums = {};
+    var values = [];
+    // calculate sums
+    $.each(tweets, function(i, tweet) {
+        var key = tweet.taxonomy.disease;
+        if(!sums[key]) sums[key] = 0;
+        sums[key]++;
+    });
+    // sort on value
+    $.each(sums, function(disease, count) {
+        values.push([disease, count]);
+    });
+    values.sort(function(a, b) { return b[1] - a[1]; });
+    
+    return values;
+}
+
+function reduceForHistograms(tweets) {
+    var sums = {};
+    var values = {};
+    // each tweet and term, get sum
+    $.each(tweets, function(i, tweet) {
+        var dstr = tweet.created_at.substring(0, 19);
+        var key =  tweet.taxonomy.disease + ";" + tweet.taxonomy.terms + ";" + dstr;
+        if(!sums[key]) sums[key] = 0;
+        sums[key]++;
+    });
+    // format it properly for processHistograms
+    values["rows"] = [];
+    $.each(sums, function(k, v) {
+        values.rows.push({
+            key: [k.split(";")[0], k.split(";")[1], k.split(";")[2]],
+            value: v
+        });
+    });
+    
+    return values;
+}
+
+function processCounts(data) {
+    // clear out ul
+    $("ul#histogram").empty();
+    // adds panels for each disease at the bottom of the page
+    $.each(data, function(i, info) {
+        // add appropriate panels
+        var disease = info[0], count = info[1];
+        var template = '<li>\n' +
+    	    '<div class="histogram">\n' +
+    		    '<a class="' + disease.replace(/\'/g, "").replace(/\W/g, "-") +
+    		        '" href="' + getUrl(false, null, disease) + '">\n' +
+    				disease + ' [' + count + ']\n' +
+    		    '</a>\n' +
+    		    '<span id="' + disease.replace(/[^A-Za-z]/g, "") + '"></span>\n' +
+    		'</div>\n' +
+    		'<div id="' + disease.replace(/[^A-Za-z]/g, "") + '" class="snippets">\n' +
+    		    '<div id="0"></div><div id="1"></div><div id="2"></div><div id="3"></div>\n' +
+    		'</div>\n' +
+    	'</li>\n';
+    	$("ul#histogram").append(template);
+    });
+}
+
+function processHistograms(dataJSON) {
+    
+	var data = [];
+	var byDisease = new Object();
+	byDisease['Anthrax'] = [];
+	byDisease['Cholera'] = [];
+	byDisease['CommonCold'] = [];
+	byDisease['Dengue'] = [];
+	byDisease['Diphtheria'] = [];
+	byDisease['Gastroenteritis'] = [];
+	byDisease['Influenza'] = [];
+	byDisease['LegionnairesDisease'] = [];
+	byDisease['Malaria'] = [];
+	byDisease['Measles'] = [];
+	byDisease['Meningitis'] = [];
+	byDisease['MosquitoBorneDisease'] = [];
+	byDisease['Mumps'] = [];
+	byDisease['Pertussis'] = [];
+	byDisease['Pneumonia'] = [];
+	byDisease['Polio'] = [];
+	byDisease['Rabies'] = [];
+	byDisease['Smallpox'] = [];
+	byDisease['STD'] = [];
+	byDisease['Tetanus'] = [];
+	byDisease['TickBorneDisease'] = [];
+	byDisease['Tuberculosis'] = [];
+	byDisease['Typhoid'] = [];
+	byDisease['Varicella'] = [];
+	epochMap = {};
+	
+	var root = new Date(2012, 5, 1,0,0,0,0).getTime();
+	var diseaseEnum = {
+	    Anthrax: 0,
+	    Cholera: 1,
+	    CommonCold: 2,
+	    Dengue: 3,
+	    Diphtheria: 4,
+	    Gastroenteritis: 5,
+	    Influenza: 6,
+	    LegionnairesDisease: 7,
+	    Malaria: 8,
+	    Measles: 9,
+	    Meningitis: 10,
+	    MosquitoBorneDisease: 11,
+	    Mumps: 12,
+	    Pertussis: 13,
+	    Pneumonia: 14,
+	    Polio: 15,
+	    Rabies: 16,
+	    Smallpox: 17,
+	    STD: 18,
+	    Tetanus: 19,
+	    TickBorneDisease: 20,
+	    Tuberculosis: 21,
+	    Typhoid: 22,
+	    Varicella: 23
+	};
+	// Convert strings to numbers.
+	$.each(dataJSON, function(){
+			$.each(this, function(k,v){
+				var date = v.key.toString().split(',')[3];
+				var epoch = 
+					// align them by epoc
+					(new Date(date.split(' ')[3], 5, date.split(' ')[1],date.split(' ')[4],0,0,0).getTime() - root) / 100000;
+				var dis = v.key.toString().split(',')[0];
+				// add disease-based offset
+				epoch += diseaseEnum[dis.replace(/[^A-Za-z]/g, '')];
+				var realDate = new Date(date.split(' ')[3], 4, date.split(' ')[1],
+				    date.split(' ')[4], 0, 0, 0);
+                  
+                  //log.info(v.key.toString());
+                  //log.info(v.key.toString().split(',')[0]);
+				  data.push({
+					disease:v.key.toString().split(',')[0],
+					date:epoch,
+					realDate: realDate,
+					value:v.value
+					});
+				  
+				  try{
+					  byDisease[v.key.toString().split(',')[0].replace(/[^A-Za-z]/g, '')].push({
+							disease:v.key.toString().split(',')[0],
+							date:epoch,
+        					realDate: realDate,
+							value:v.value
+							});
+				  }catch(err){}
+				  
+				  epochMap[epoch] = realDate;
+				  
+				//alert(v.key.toString().split(',')[3]+"|"+v.value);
+			});
+	});
+	
+	var barWidth = 2;
+	var width = $('#chart').width();
+	var height = 100;
+	var x = d3.scale.linear().domain([d3.min(data, function(datum) { return datum.date; }), d3.max(data, function(datum) { return datum.date; })]).range([0, width]);
+	var y = d3.scale.linear().domain([0, d3.max(data, function(datum) { return datum.value; })]).
+	  rangeRound([0, height]);
+	
+	// add the canvas to the DOM
+	// for now, no large histogram, but maybe we'll revisit this later
+	/*$("#chart").empty();
+	var barDemo = d3.select("#chart").
+	  append("svg:svg").
+	  attr("width", width).
+	  attr("height", height);
+	
+	barDemo.selectAll("rect").
+	  data(data).
+	  enter().
+	  append("svg:rect").
+	  attr("x", function(datum, index) { return x(datum.date); }).
+	  attr("y", function(datum) { return height - y(datum.value); }).
+	  attr("height", function(datum) { return y(datum.value); }).
+	  attr("width", barWidth).
+	  attr("fill", function(datum){ return getColorByDisease(datum.disease)});*/
+	
+	$.each(byDisease,function(index, data){
+        var w = ($("#chart").width() * 0.3).toFixed() - 40;
+        var h = height/2;
+        var xmin = d3.min(data, function(datum) { return datum.date; });
+        var xmax = d3.max(data, function(datum) { return datum.date; });
+        var x = d3.scale.linear().domain([xmin, xmax]).range([0, w]);
+        var ymin = 0;
+        var ymax = d3.max(data, function(datum) { return datum.value; });
+        var y = d3.scale.linear().domain([0, ymax]).rangeRound([0, h]);
+        var xpadding = 20;
+        var ypaddingTop = 10;
+        var ypaddingBottom = 75;
+        
+        // add the canvas to the DOM
+        $("#" + index).empty()
+        var barDemo = d3.select("#"+index).
+          append("svg:svg").
+          attr("width", w + xpadding * 2).
+          attr("height", h + ypaddingBottom + ypaddingTop);
+        
+        // add axes and labels
+        var dates = [];
+        for(var i = xmin; i <= xmax; i += 36) {
+            // start
+            if(i == xmin)
+                dates.push([i, epochMap[i]]);
+            // every day
+            else if((i - diseaseEnum[index]) % 864 == 0) {
+                if(!!epochMap[i])
+                    dates.push([i, epochMap[i]]);
+                else {
+                    var msDiff = (i - xmin) * 100000;
+                    epochMap[i] = new Date(epochMap[xmin].getTime() + msDiff);
+                    dates.push([i, epochMap[i]]);
+                }
+            }
+        }
+        
+        var yAxis = [];
+        for(var i = 0; i < ymax; i += 250)
+            yAxis.push(i);
+        yAxis[yAxis.length-1] = ymax;
+        
+        var axes = barDemo.append("svg:g");
+        
+        // add tick marks
+        axes.selectAll(".xTicks").
+            data(dates).
+            enter().
+            append("svg:line").
+            attr("x1", function(datum) { return x(datum[0]) + xpadding; }).
+            attr("x2", function(datum) { return x(datum[0]) + xpadding; }).
+            attr("y1", h + ypaddingTop).
+            attr("y2", h + ypaddingTop + 4).
+            attr("stroke", "white");
+            
+        axes.selectAll(".yTicks").
+            data(yAxis).
+            enter().
+            append("svg:line").
+            attr("x1", xpadding - 4).
+            attr("x2", xpadding).
+            attr("y1", function(datum) { return h - y(datum) + ypaddingTop; }).
+            attr("y2", function(datum) { return h - y(datum) + ypaddingTop; }).
+            attr("stroke", "white");
+        
+        axes.selectAll(".yTicks").
+            data(yAxis).
+            enter().
+            append("svg:line").
+            attr("x1", xpadding).
+            attr("x2", xpadding + w).
+            attr("y1", function(datum) { return h - y(datum) + ypaddingTop; }).
+            attr("y2", function(datum) { return h - y(datum) + ypaddingTop; }).
+            attr("stroke", "#999999");
+        
+        // add labels
+        axes.selectAll("text.xAxisBottom").
+            data(dates).
+            enter().
+            append("svg:text").
+            text(function(datum) {
+                // format date string
+                var day = datum[1];
+                var mo = day.getMonth() < 9 ? "0" + (day.getMonth() + 1) : "" + (day.getMonth() + 1);
+                var date = day.getDate() < 10 ? "0" + day.getDate() : "" + day.getDate();
+                var dayStr = mo + "/" + date;
+                // format time string if necessary
+                if(day.getHours() != 0) {
+                    dayStr += " " + day.toTimeString().split(" ")[0];
+                }
+                return dayStr;
+            }).
+            attr("x", function(datum) { return x(datum[0]) + xpadding; }).
+            attr("y", h + ypaddingTop + 10).
+            attr("text-anchor", "start").
+            attr("style", "fill:white; font-size:9px").
+            each(function(d, i) {
+                var x = d3.select(this).attr("x");
+                var y = d3.select(this).attr("y");
+                d3.select(this).attr("transform", "rotate(45 " + x + "," + y + ")");
+            });
+
+        axes.selectAll("text.yAxisLeft").
+            data(yAxis).
+            enter().
+            append("svg:text").
+            text(function(datum) { return datum; }).
+            attr("x", xpadding - 10).
+            attr("y", function(datum) { return h - y(datum) + ypaddingTop; }).
+            attr("text-anchor", "end").
+            attr("style", "fill:white; font-size:9px");
+        
+        // draw rects
+        barDemo.selectAll("rect").
+          data(data).
+          enter().
+          append("svg:rect").
+          attr("x", function(datum) { return x(datum.date) + xpadding; }).
+          attr("y", function(datum) { return h - y(datum.value) + ypaddingTop; }).
+          attr("height", function(datum) { return y(datum.value); }).
+          attr("width", barWidth).
+          attr("fill", function(datum){ return getColorByDisease(datum.disease)});
+	});
+    
+}
+</script></body></html>
